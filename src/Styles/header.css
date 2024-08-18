@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+
+.banner {
+  border-bottom: 2px solid whitesmoke;
+  color: #686889;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 0% 8px;
+  font-family: "Nunito Sans", sans-serif;
+  position: fixed;
+  z-index: 999;
+}
+
+.section-notification {
+  background-color: #00c573;
+  background-image: linear-gradient(180deg, #00c573, #0d884f);
+  width: 100%;
+}
+
+.notification-bar {
+  display: flex;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.notification img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+}
+
+.notification p {
+  color: white;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  top: -5px;
+}
+
+.notification {
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.header-nav-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-nav-list-item {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  color: #686889;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.header-nav-list-item:hover {
+  color: #00c573;
+}
+
+.dropdown-arrow {
+  font-family: "Material Icons";
+  font-size: 16px;
+  margin-left: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-nav-list-item:hover .dropdown-arrow {
+  transform: rotate(180deg);
+  color: #00c573;
+}
+
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Adjust width as needed */
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.header-nav-list-item:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Grid Styles */
+.dropdown-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-section {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.grid-section h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #00c573;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.dropdown-image {
+  width: 20px;
+  height: 20px;
+}
+
+/* Adjusting gradients if needed */
+.dropdown-gradients {
+  display: none; /* Hides gradients in this case; include if needed elsewhere */
+}
+
+.all-services {
+  background-color: #00c573;
+  border-radius: 9px;
+  margin-left: 24px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  padding: 18px 24px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Add transform to transition */
+}
+
+.all-services:hover {
+  background-color: #0d884f;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.social-logo {
+  transition: transform 0.3s ease; /* Correct transition property and value */
+}
+
+.social-logo:hover {
+  cursor: pointer;
+  transform: scale(0.9); /* Apply scaling on hover */
+}

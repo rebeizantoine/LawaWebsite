@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* or your preferred font */
+  color: #f6f0e6; /* or your preferred text color */
+  background-color: #ffffff; /* or your preferred background color */
+  line-height: 1.6; /* Ensure readability */
+}
 
 .App-logo {
   height: 40vmin;
