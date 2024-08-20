@@ -45,3 +45,17 @@ body {
     transform: rotate(360deg);
   }
 }
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #14141b;
+  --light-gray: #686889;
+  --light-bg: #f6faff;
+  --green: #00c573;
+  --green-dark: #01a55e;
+  --blue: #00a65b;
+  --highlight: #fb5343;
+  --text-light: #b6b6cf;
+  --tiktok-cyan: #69c9d0; /* TikTok cyan color */
+  --tiktok-magenta: #ee1d52; /* TikTok magenta color */
+}

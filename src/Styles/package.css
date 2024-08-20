@@ -1,0 +1,156 @@
+/* Ensure container fits the viewport width */
+.container {
+  max-width: 1302px !important;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  color: #181818;
+  margin-top: 50px;
+}
+
+/* Flex container for aligning steps horizontally */
+.step-lists {
+  padding: 50px;
+  background-color: #f5f8fa;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between; /* Align steps horizontally */
+  position: relative; /* Create positioning context for the progress line */
+}
+
+/* Ensure steps fit in a row */
+.step {
+  position: relative;
+  flex: 1; /* Allow steps to grow and shrink equally */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Dot level styling */
+.progress-dot {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #00c573; /* Updated color for contrast */
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure dots are above the progress line */
+}
+
+/* Inner dot styling */
+.dot-inner {
+  width: 12px;
+  height: 12px;
+  background-color: #fff; /* Updated for better contrast */
+  border-radius: 50%;
+}
+
+/* Ensure text and heading styles */
+.step h3 {
+  font-size: 20px;
+  color: #181818;
+  margin-bottom: 15px;
+}
+
+.step p {
+  padding: 0 10%;
+  margin: 0;
+}
+
+/* Gradient text block styling */
+.gradient-text-block {
+  background-color: #f5f8fa;
+  border-radius: 4px;
+  padding: 7px 14px;
+  display: inline-block;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.gradient-text {
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background: linear-gradient(
+    95deg,
+    #00c573 15%,
+    /* Updated gradient start color */ #009e53 45%,
+    /* Updated gradient middle color */ #007a39 75%,
+    /* Updated gradient end color */ #004d1a 100%
+      /* Updated gradient end color */
+  );
+  display: none;
+}
+
+/* Header title styling */
+.header-top .title {
+  font-size: 44px;
+  font-weight: 600;
+  color: #181818;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Positioning dots above steps */
+.step:nth-child(1) .progress-dot {
+  left: 10%; /* Adjust positioning based on step index */
+}
+
+.step:nth-child(2) .progress-dot {
+  left: 50%;
+}
+
+.step:nth-child(3) .progress-dot {
+  left: 90%;
+}
+
+/* Progress line connecting the steps */
+.step-lists::before {
+  content: "";
+  position: absolute;
+  top: 41%;
+  left: 100px;
+  width: 86%;
+  height: 6px;
+  background: #00c573; /* Updated color for contrast */
+  z-index: 0; /* Ensure line is below the dots */
+  transform: translateY(-50%); /* Center progress line vertically */
+  background-image: radial-gradient(
+    circle farthest-corner at 0%,
+    #00c573 25%,
+    /* Updated gradient start color */ #009e53 45%,
+    /* Updated gradient middle color */ #007a39 65%,
+    /* Updated gradient end color */ #004d1a 85%
+      /* Updated gradient end color */
+  );
+}
+
+/* Adjust positioning of the progress dots */
+.step:nth-child(1) .progress-dot {
+  left: 10%; /* Adjust positioning based on step index */
+}
+
+.step:nth-child(2) .progress-dot {
+  left: 50%;
+}
+
+.step:nth-child(3) .progress-dot {
+  left: 90%;
+}
+
+.desc {
+  margin-top: 50px !important;
+}
+
+.step:nth-child(1) .progress-dot {
+  left: 45%;
+}
+
+.step:nth-child(3) .progress-dot {
+  left: 45%;
+}

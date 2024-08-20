@@ -1,0 +1,127 @@
+.faq-section {
+  padding: 80px 3% 0;
+}
+
+.content-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.h2.h2-centre {
+  color: #14141b;
+  text-align: center;
+  font-family: Clashdisplay, sans-serif;
+  font-weight: 600;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 40px;
+  width: 100%;
+  margin: 64px auto 0;
+}
+
+.accordion-item-wrapper {
+  max-width: 886px;
+  margin: 0 auto;
+}
+.accordion-item-wrapper:nth-child(7) {
+  position: relative;
+  left: 50%;
+}
+
+.accordion-item {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 24px 32px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  width: 558px;
+}
+
+.accordion-item.active {
+  border-color: #4a3aff;
+}
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item-title {
+  font-family: Clashdisplay, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #14141b;
+}
+
+.accordion-arrow-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 16px #080f340f;
+  transition: transform 0.3s ease;
+}
+
+.accordion-arrow {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-line {
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background-color: #00c357;
+  transition: transform 0.3s ease;
+}
+
+.arrow-line._1 {
+  transform: rotate(90deg);
+}
+
+.arrow-line._2 {
+  transform: rotate(0deg);
+}
+
+.accordion-arrow.open ._1 {
+  transform: rotate(45deg);
+}
+
+.accordion-arrow.open ._2 {
+  transform: rotate(-45deg);
+}
+
+.accordion-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.accordion-content.open {
+  height: auto;
+  opacity: 1;
+  padding-top: 16px;
+}
+
+.faq-paragraph {
+  color: #686889;
+  font-family: Satoshi variable, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+}

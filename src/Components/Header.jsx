@@ -51,6 +51,7 @@ const Header = () => {
                 <img
                   src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
                   className="social-logo"
+                  onClick={handleallservice}
                   alt=""
                 />
                 <li className="header-nav-list-item">

@@ -1,0 +1,272 @@
+.hero-section-services {
+  background-color: var(--white);
+  background-image: linear-gradient(#fffffff5, #fff),
+    url("../Images/gridalignement.png");
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+  align-items: flex-start;
+  height: auto;
+  min-height: 650px;
+  padding: 200px 3% 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.flex-container {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.hero-grid-wrapper {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  flex-direction: row;
+  flex: 0 auto;
+  order: 0;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-self: auto;
+  align-items: flex-start;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.hero-text-block {
+  /* grid-column-gap: 16px;
+  grid-row-gap: 16px; */
+  text-align: left;
+  flex: 0 auto;
+  order: 0;
+  /* grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr; */
+  align-self: flex-start;
+  margin-right: 32px;
+  padding-right: 0;
+  display: block;
+}
+.hero-h1 {
+  color: #14141b;
+  text-align: left;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
+}
+.title-span-green {
+  color: #00c573;
+}
+.hero-paragraph {
+  color: #686889;
+  text-align: left;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  font-family: Satoshi variable, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.bold-text-4 {
+  font-weight: 400;
+}
+.div-review-section-hero {
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.img-review-star {
+  align-self: flex-start;
+  margin-top: 0;
+  margin-right: 4px;
+}
+.p-reviews-hero {
+  color: #686889;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  margin-left: 4px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+  margin-top: 0px;
+}
+.text-span-15 {
+  color: #00c573;
+  font-weight: 600;
+}
+.div-hero-bullets {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: row;
+  justify-content: start;
+  place-items: center start;
+  width: auto;
+  max-width: 540px;
+  display: flex;
+}
+.div-hero-bullets {
+  background-color: #f6faff;
+  border: 1px solid #0000000d;
+  border-radius: 8px;
+
+  margin-top: 32px;
+  margin-bottom: 80px;
+  padding: 16px;
+}
+.div-hero-bullet {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.p-hero-bullet {
+  color: #686889;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 0px;
+}
+.hero-pricing-wrapper {
+  height: auto;
+  position: static;
+  inset: 0% 0% 0% auto;
+}
+.hero-pricing-container {
+  z-index: 2;
+  border: 3px none black;
+  background-color: #14141b;
+  text-align: left;
+  background-image: url(https://cdn.prod.website-files.com/628d446…/63ff3f8…_socialplug-pricingbox-illustration.svg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 15px;
+  width: 450px;
+  max-width: 450px;
+  padding: 40px 32px;
+  position: relative;
+}
+.pricing-header-copy {
+  color: #b6b6cf;
+  text-align: left;
+  background-color: #0000;
+  align-self: flex-end;
+  margin-bottom: 8px;
+  padding-right: 0;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block;
+  position: static;
+}
+.green-line-pricing {
+  z-index: 1;
+  background-color: #00c573;
+  width: 100%;
+  height: 3px;
+  margin-top: -28px;
+  margin-bottom: 20px;
+  display: none;
+  position: static;
+}
+.div-pricing {
+  color: #fff;
+  margin-top: 0;
+  display: flex;
+}
+.p-price-lg {
+  color: #fff;
+  margin-bottom: 0;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 56px;
+}
+.pricing-secondary-text {
+  color: #00c573;
+  align-self: flex-end;
+  margin-top: 0;
+  margin-left: 8px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.div-pricing-bullets {
+  margin-top: 24px;
+  display: block;
+}
+.div-bullets {
+  align-items: center;
+  margin-bottom: 16px;
+  display: flex;
+}
+.img-checkmark {
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+.p-bullets-sm {
+  color: #b6b6cf;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  position: relative;
+  top: -15px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+.button-pricing {
+  background-color: #00c573;
+  background-image: linear-gradient(to bottom, #00c573, #01a55e);
+  text-align: center;
+  letter-spacing: 0.3px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 24px;
+  padding: 18px 32px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  transition: all 0.3s;
+}
+.img-payment-icons-card {
+  height: 24px;
+  margin: 24px auto 0;
+  display: block;
+}
+.w-button {
+  color: #fff;
+
+  cursor: pointer;
+
+  border: 0;
+
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 45px;
+}
