@@ -1,0 +1,214 @@
+.content-section1 {
+  background-color: whitesmoke;
+  border-bottom: 1px solid #e2e2e2;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  object-fit: fill;
+  padding: 80px 3%;
+  overflow: visible;
+}
+.flex-container {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.standard-paragraph.center {
+  color: #686889;
+  text-align: center;
+  max-width: 600px;
+  height: auto;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 32px;
+  display: block;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+}
+.how-it-works-grid {
+  grid-column-gap: 80px;
+  grid-row-gap: 100px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* This ensures that each item takes up one column in a three-column grid */
+  width: 100%;
+  max-width: 1140px;
+  margin: 64px auto 0;
+  position: relative;
+  display: grid;
+}
+.p-how-it-works-nr {
+  background-color: #14114b;
+  outline-offset: 0px;
+  color: #fff;
+  border: 1px #000;
+  border-radius: 4px;
+  outline: 3px #333;
+  width: 50px;
+  height: 48px;
+  margin-bottom: 10px;
+  padding: 9px 10px 0;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  display: inline-block;
+  margin-top: 0;
+}
+.p-how-heading {
+  color: #14114b;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: Clashdisplay, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.standard-paragraph.center.p-sm {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #686889;
+  :root {
+    --root-color--tiktok: #14114b; /* Example color for primary TikTok elements */
+    --root-color--secondary: #686889; /* Example secondary color */
+    --root-bg--section: whitesmoke;
+    --root-border--section: #e2e2e2;
+    --root-color--text: #fff;
+    --root-color--outline: #333;
+    --root-color--border: #000;
+  }
+
+  .content-section1 {
+    background-color: var(--root-bg--section);
+    border-bottom: 1px solid var(--root-border--section);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    object-fit: fill;
+    padding: 80px 3%;
+    overflow: visible;
+  }
+
+  .flex-container {
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .standard-paragraph.center {
+    color: var(--root-color--secondary);
+    text-align: center;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    display: block;
+  }
+
+  .how-it-works-grid {
+    grid-column-gap: 80px;
+    grid-row-gap: 100px;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1140px;
+    margin: 64px auto 0;
+    position: relative;
+    display: grid;
+  }
+
+  .p-how-it-works-nr {
+    background-color: var(--root-color--tiktok);
+    outline-offset: 0px;
+    color: var(--root-color--text);
+    border: 1px var(--root-color--border);
+    border-radius: 4px;
+    outline: 3px var(--root-color--outline);
+    width: 50px;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 9px 10px 0;
+    font-family: Clashdisplay, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .p-how-heading {
+    color: var(--root-color--tiktok);
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: Clashdisplay, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .standard-paragraph.center.p-sm {
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--root-color--secondary);
+    text-align: center;
+    max-width: 600px;
+    height: auto;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    display: block;
+  }
+
+  .img-how-to-order-line {
+    max-width: 70%;
+    position: absolute;
+    top: 10%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  text-align: center;
+  max-width: 600px;
+  height: auto;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 32px;
+  display: block;
+}
+.img-how-to-order-line {
+  max-width: 70%;
+  position: absolute;
+  top: 10%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 50px;
+}

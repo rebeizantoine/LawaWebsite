@@ -22,6 +22,7 @@ import Frequentlyinsta from "./Components/Frequentlyinsta";
 import ContactFormEmbed from "./Components/Contactformembed";
 import Viewstiktok from "./Components/Viewstiktok";
 import Frequentlytiktok from "./Components/Frequentlytiktok";
+import Howtoordertiktok from "./Components/Howtoordertiktok";
 function App() {
   return (
     <div className="App">
@@ -129,8 +130,9 @@ function App() {
               <>
                 <Header />
                 <Viewstiktok />
+                <Howtoordertiktok />
                 <Frequentlytiktok />
-                {/* <Footer /> */}
+                <Footer />
               </>
             }
           ></Route>
