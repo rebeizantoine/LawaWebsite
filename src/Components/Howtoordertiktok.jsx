@@ -36,8 +36,8 @@ const Howtoordertiktok = () => {
               </div>
               <p className="p-how-heading">Set Your Target</p>
               <p className="standard-paragraph center p-sm">
-                Specify the amount you need, for example, 1000 TikTok likes or
-                500 likes.
+                Specify the amount you need, for example, 1000 TikTok views or
+                500 views.
               </p>
               <img
                 src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6400d6caf94166be7ca4de87_6110b1396056a5e6b0bd01f9_Dot%20Wave.svg"

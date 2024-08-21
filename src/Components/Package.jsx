@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "../Styles/package.css"; // Add your own CSS for styling
 
 const Package = () => {
+  useEffect(() => {
+    AOS.init(); // Initialize AOS
+  }, []);
+
   return (
     <section
-      className="how-it-works text-center aos-init aos-animate"
+      className="how-it-works text-center"
       data-aos="fade-up"
       data-aos-easing="ease"
       data-aos-duration="700"
@@ -18,12 +24,12 @@ const Package = () => {
               </p>
               <div className="title">How to Buy a Package?</div>
               <span>
-                Buying social media packages from Goread.io is simple and fast.
-                Just follow these steps
+                Buying social media packages from Us is simple and fast. Just
+                follow these steps
               </span>
             </div>
             <div className="col-xl-10 offset-xl-1 col-lg-12 col-md-12">
-              <div className="row step-lists">
+              <div className="row step-lists" data-aos="fade-up">
                 <div className="col-lg-4 col-md-4 step text-center">
                   <div className="header-name">
                     <h3>Choose Package</h3>

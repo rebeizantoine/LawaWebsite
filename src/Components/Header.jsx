@@ -60,40 +60,40 @@ const Header = () => {
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Instagram1</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/sing" className="dropdown-item">
                           <img
                             src={instagram}
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 1</p>
+                          <p>Instagram Followers</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/likesinsta" className="dropdown-item">
                           <img
                             src={instagram}
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 2</p>
+                          <p>Instagram Likes</p>
                         </a>
                       </div>
                       <div className="grid-section">
                         <h3>Instagram2</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/commentsinsta" className="dropdown-item">
                           <img
                             src={instagram}
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 1</p>
+                          <p>Instagram Comments</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/Viewsinsta" className="dropdown-item">
                           <img
                             src={instagram}
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 2</p>
+                          <p>Twitter Views</p>
                         </a>
                       </div>
                     </div>
@@ -105,32 +105,32 @@ const Header = () => {
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Twitter1</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/followertwitter" className="dropdown-item">
                           <img
                             src={twitter}
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 1</p>
+                          <p>Twitter Followers</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/liketwitter" className="dropdown-item">
                           <img
                             src={twitter}
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 2</p>
+                          <p>Twitter Likes</p>
                         </a>
                       </div>
                       <div className="grid-section">
                         <h3>Twitter2</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/Commentstwitter" className="dropdown-item">
                           <img
                             src={twitter}
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 1</p>
+                          <p>Twitter Comments</p>
                         </a>
                         <a href="#" className="dropdown-item">
                           <img
@@ -138,7 +138,7 @@ const Header = () => {
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 2</p>
+                          <p>Twitter Views</p>
                         </a>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ const Header = () => {
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 1</p>
+                          <p>Tiktok Followers</p>
                         </a>
                         <a href="#" className="dropdown-item">
                           <img
@@ -164,26 +164,26 @@ const Header = () => {
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 2</p>
+                          <p>Tiktok Likes</p>
                         </a>
                       </div>
                       <div className="grid-section">
                         <h3>Tiktok2</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/commentstiktok" className="dropdown-item">
                           <img
                             src={tiktok}
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 1</p>
+                          <p>Tiktok Comments</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/viewtiktok" className="dropdown-item">
                           <img
                             src={tiktok}
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Free Item 2</p>
+                          <p>Tiktok Views</p>
                         </a>
                       </div>
                     </div>
@@ -194,14 +194,14 @@ const Header = () => {
                   <div className="dropdown-menu">
                     <div className="dropdown-grid">
                       <div className="grid-section">
-                        <h3>Tiktok1</h3>
+                        <h3>Twitch1</h3>
                         <a href="#" className="dropdown-item">
                           <img
                             src={twitch}
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 1</p>
+                          <p>Twitch Followers</p>
                         </a>
                         <a href="#" className="dropdown-item">
                           <img
@@ -209,11 +209,11 @@ const Header = () => {
                             alt="NFT Twitter Content"
                             className="dropdown-image"
                           />
-                          <p>NFT Twitter Item 2</p>
+                          <p>Twitch Views</p>
                         </a>
                       </div>
-                      <div className="grid-section">
-                        <h3>Tiktok2</h3>
+                      {/* <div className="grid-section">
+                        <h3>Twitch2</h3>
                         <a href="#" className="dropdown-item">
                           <img
                             src={twitch}
@@ -230,7 +230,7 @@ const Header = () => {
                           />
                           <p>Twitter Free Item 2</p>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </li>

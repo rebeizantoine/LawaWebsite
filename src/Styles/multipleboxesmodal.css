@@ -106,7 +106,7 @@
 }
 
 .flexy-2 {
-  color: #181818; /* Dark text color */
+  color: #ffffff; /* Dark text color */
   font-weight: 700;
 }
 
@@ -263,7 +263,7 @@
 
 .div-close {
   position: relative;
-  top: -290px; /* Adjust as necessary */
+  top: -430px; /* Adjust as necessary */
   left: 20px; /* Adjust as necessary */
   z-index: 100; /* Ensure it stays on top */
 }

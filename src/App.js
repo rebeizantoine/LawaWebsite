@@ -23,6 +23,23 @@ import ContactFormEmbed from "./Components/Contactformembed";
 import Viewstiktok from "./Components/Viewstiktok";
 import Frequentlytiktok from "./Components/Frequentlytiktok";
 import Howtoordertiktok from "./Components/Howtoordertiktok";
+import Liketiktok from "./Components/Liketiktok";
+import Howtoordertiktoklike from "./Components/Howtoordertiktoklike";
+import Liketwitter from "./Components/Liketwitter";
+import Howtoordertwitterlike from "./Components/Howtoordertwitterfollower";
+import Frequentlytwitter from "./Components/Frequentlytwitter";
+import Followertwitter from "./Components/Followertwitter";
+import Howtoordertwitterfollower from "./Components/Howtoordertwitterfollower";
+import Frequentlytwitterfollower from "./Components/Frequentlytwitterfollower";
+import Frequentlyinstaview from "./Components/Frequentlyinstaview";
+import Viewsinsta from "./Components/Viewsinsta";
+import Commentsinsta from "./Components/Commentsinsta";
+import Frequentlyinstacomments from "./Components/Frequentlyinstacomments";
+import Commentstiktok from "./Components/Commentstiktok";
+import Commentstwitter from "./Components/Commentstwitter";
+import Frequentlytwittercomments from "./Components/Frequentlytwittercomments";
+import Viewstwitter from "./Components/Viewstwitter";
+import FrequentlyTwitterComments from "./Components/Frequentlytwitterview";
 function App() {
   return (
     <div className="App">
@@ -36,7 +53,8 @@ function App() {
                 <Hero />
                 <Services />
                 <Whychoose />
-                <Howtoorder />
+                {/* <Howtoorder /> */}
+                <Package />
                 <Howpay />
                 <Partners />
                 <Footer />
@@ -51,9 +69,7 @@ function App() {
                 <Singleservice />
                 <Package />
                 <Frequently />
-
                 <Services />
-
                 <Footer />
               </>
             }
@@ -66,9 +82,74 @@ function App() {
                 <Likeinsta />
                 <Package />
                 <Frequentlyinsta />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Viewsinsta"
+            element={
+              <>
+                <Header />
+                <Viewsinsta />
+                <Howtoorder />
+                <Frequentlyinstaview />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Viewstwitter"
+            element={
+              <>
+                <Header />
+                <Viewstwitter />
+                <Howtoorder />
+                <FrequentlyTwitterComments />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Commentsinsta"
+            element={
+              <>
+                <Header />
+                <Commentsinsta />
+                <Howtoorder />
+                <Frequentlyinstacomments />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Commentstiktok"
+            element={
+              <>
+                <Header />
+                <Commentstiktok />
+                <Howtoordertiktok />
+                <Frequentlytiktok />
 
                 <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/Commentstwitter"
+            element={
+              <>
+                <Header />
+                <Commentstwitter />
+                <Howtoordertwitterfollower />
+                <Frequentlytwittercomments />
 
+                <Services />
                 <Footer />
               </>
             }
@@ -132,6 +213,46 @@ function App() {
                 <Viewstiktok />
                 <Howtoordertiktok />
                 <Frequentlytiktok />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/liketiktok"
+            element={
+              <>
+                <Header />
+                <Liketiktok />
+                <Howtoordertiktoklike />
+                <Frequentlytiktok />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/liketwitter"
+            element={
+              <>
+                <Header />
+                <Liketwitter />
+                <Howtoordertwitterlike />
+                <Frequentlytwitter />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/followertwitter"
+            element={
+              <>
+                <Header />
+                <Followertwitter />
+                <Howtoordertwitterfollower />
+                <Frequentlytwitterfollower />
+                <Services />
                 <Footer />
               </>
             }

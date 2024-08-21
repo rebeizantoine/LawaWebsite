@@ -1,4 +1,4 @@
-.hero-section-services {
+.hero-section-services-instagram {
   background-color: var(--white);
   background-image: linear-gradient(#fffffff5, #fff),
     url("../Images/gridalignement.png");
@@ -11,8 +11,9 @@
   display: block;
   position: relative;
   overflow: hidden;
+  margin-bottom: -60px;
 }
-.flex-container {
+.flex-container-instagram {
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,7 +24,7 @@
   margin-right: auto;
   display: flex;
 }
-.hero-grid-wrapper {
+.hero-grid-wrapper-instagram {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   flex-direction: row;
@@ -39,7 +40,7 @@
   margin-right: auto;
   display: flex;
 }
-.hero-text-block {
+.hero-text-block-instagram {
   /* grid-column-gap: 16px;
   grid-row-gap: 16px; */
   text-align: left;
@@ -53,7 +54,7 @@
   padding-right: 0;
   display: block;
 }
-.hero-h1 {
+.hero-h1-instagram {
   color: #14141b;
   text-align: left;
   letter-spacing: 0;
@@ -64,10 +65,10 @@
   font-weight: 600;
   line-height: 64px;
 }
-.title-span-green {
+.title-span-green-instagram {
   color: #00c573;
 }
-.hero-paragraph {
+.hero-paragraph-instagram {
   color: #686889;
   text-align: left;
   letter-spacing: 0;
@@ -77,21 +78,21 @@
   font-weight: 400;
   line-height: 32px;
 }
-.bold-text-4 {
+.bold-text-4-instagram {
   font-weight: 400;
 }
-.div-review-section-hero {
+.div-review-section-hero-instagram {
   align-items: flex-start;
   margin-top: 40px;
   margin-bottom: 5px;
   display: flex;
 }
-.img-review-star {
+.img-review-star-instagram {
   align-self: flex-start;
   margin-top: 0;
   margin-right: 4px;
 }
-.p-reviews-hero {
+.p-reviews-hero-instagram {
   color: #686889;
   letter-spacing: 0.2px;
   margin-bottom: 0;
@@ -104,11 +105,11 @@
   text-decoration: none;
   margin-top: 0px;
 }
-.text-span-15 {
+.text-span-15-instagram {
   color: #00c573;
   font-weight: 600;
 }
-.div-hero-bullets {
+.div-hero-bullets-instagram {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   flex-flow: row;
@@ -118,7 +119,7 @@
   max-width: 540px;
   display: flex;
 }
-.div-hero-bullets {
+.div-hero-bullets-instagram {
   background-color: #f6faff;
   border: 1px solid #0000000d;
   border-radius: 8px;
@@ -127,26 +128,26 @@
   margin-bottom: 80px;
   padding: 16px;
 }
-.div-hero-bullet {
+.div-hero-bullet-instagram {
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   justify-content: center;
   align-items: center;
   display: flex;
 }
-.p-hero-bullet {
+.p-hero-bullet-instagram {
   color: #686889;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 14px;
   margin-top: 0px;
 }
-.hero-pricing-wrapper {
+.hero-pricing-wrapper-instagram {
   height: auto;
   position: static;
   inset: 0% 0% 0% auto;
 }
-.hero-pricing-container {
+.hero-pricing-container-instagram {
   z-index: 2;
   border: 3px none black;
   background-color: #14141b;
@@ -161,7 +162,7 @@
   padding: 40px 32px;
   position: relative;
 }
-.pricing-header-copy {
+.pricing-header-copy-instagram {
   color: #b6b6cf;
   text-align: left;
   background-color: #0000;
@@ -176,7 +177,7 @@
   display: inline-block;
   position: static;
 }
-.green-line-pricing {
+.green-line-pricing-instagram {
   z-index: 1;
   background-color: #00c573;
   width: 100%;
@@ -186,12 +187,12 @@
   display: none;
   position: static;
 }
-.div-pricing {
+.div-pricing-instagram {
   color: #fff;
   margin-top: 0;
   display: flex;
 }
-.p-price-lg {
+.p-price-lg-instagram {
   color: #fff;
   margin-bottom: 0;
   font-family: "Nunito Sans", sans-serif;
@@ -200,7 +201,7 @@
   font-weight: 600;
   line-height: 56px;
 }
-.pricing-secondary-text {
+.pricing-secondary-text-instagram {
   color: #00c573;
   align-self: flex-end;
   margin-top: 0;
@@ -211,24 +212,25 @@
   font-weight: 500;
   line-height: 32px;
 }
-.div-pricing-bullets {
+.div-pricing-bullets-instagram {
   margin-top: 24px;
   display: block;
 }
-.div-bullets {
+.div-bullets-instagram {
   align-items: center;
   margin-bottom: 16px;
   display: flex;
 }
-.img-checkmark {
+.img-checkmark-instagram {
   align-self: flex-start;
   margin-top: 5px;
   margin-right: 8px;
 }
-.p-bullets-sm {
+.p-bullets-sm-instagram {
   color: #b6b6cf;
   letter-spacing: 0.2px;
-  margin-bottom: 0;
+  margin-bottom: -12px;
+  margin-left: 10px;
   position: relative;
   top: -15px;
   font-family: "Nunito Sans", sans-serif;
@@ -238,7 +240,7 @@
   line-height: 24px;
   text-decoration: none;
 }
-.button-pricing {
+.button-pricing-instagram {
   background-color: #00c573;
   background-image: linear-gradient(to bottom, #00c573, #01a55e);
   text-align: center;
@@ -254,12 +256,12 @@
   line-height: 16px;
   transition: all 0.3s;
 }
-.img-payment-icons-card {
+.img-payment-icons-card-instagram {
   height: 24px;
   margin: 24px auto 0;
   display: block;
 }
-.w-button {
+.w-button-instagram {
   color: #fff;
 
   cursor: pointer;

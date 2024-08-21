@@ -119,7 +119,7 @@ const Multipleboxesmodal = ({ onClose }) => {
             </div>
             <button className="order-button123">Order Now</button>
           </div>
-          {/* <div className="features-block">
+          <div className="features-block">
             <div className="features-item">
               <div className="feature-title">High-Quality Followers</div>
               <ul className="features list-unstyled leading-loose">
@@ -179,7 +179,7 @@ const Multipleboxesmodal = ({ onClose }) => {
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

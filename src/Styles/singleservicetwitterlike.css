@@ -1,0 +1,301 @@
+twitter {
+  --colortiktok-white: #ffffff;
+  --colortiktok-black: #000000;
+  --colortiktok-dark-gray: #14141b;
+  --colortiktok-light-gray: #686889;
+  --colortiktok-light-bg: #f6faff;
+  --colortiktok-green: #00c573;
+  --colortiktok-green-dark: #01a55e;
+  --colortiktok-cyan: #69c9d0;
+  --colortiktok-magenta: #ee1d52;
+  --colortiktok-text-light: #b6b6cf;
+}
+
+.hero-section-servicestwitter {
+  background-color: var(--colortiktok-white);
+  background-image: linear-gradient(
+      var(--colortiktok-white) 95%,
+      var(--colortiktok-white)
+    ),
+    url("../Images/gridalignement.png");
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+  align-items: flex-start;
+  height: auto;
+  min-height: 650px;
+  padding: 200px 3% 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.flex-containertwitter {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.hero-grid-wrappertwitter {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  flex-direction: row;
+  flex: 0 auto;
+  order: 0;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  align-self: auto;
+  align-items: flex-start;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.hero-text-blocktwitter {
+  text-align: left;
+  flex: 0 auto;
+  order: 0;
+  margin-right: 32px;
+  padding-right: 0;
+  display: block;
+}
+
+.hero-h1twitter {
+  color: var(--colortiktok-dark-gray);
+  text-align: left;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 64px;
+}
+
+.title-span-greentwitter {
+  color: var(--colortiktok-green);
+}
+
+.hero-paragraphtwitter {
+  color: var(--colortiktok-light-gray);
+  text-align: left;
+  letter-spacing: 0;
+  margin-bottom: 0;
+  font-family: Satoshi variable, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.bold-text-4twitter {
+  font-weight: 400;
+}
+
+.div-review-section-herotwitter {
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.img-review-startwitter {
+  align-self: flex-start;
+  margin-top: 0;
+  margin-right: 4px;
+}
+
+.p-reviews-herotwitter {
+  color: var(--colortiktok-light-gray);
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  margin-left: 4px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+  margin-top: 0px;
+}
+
+.text-span-15twitter {
+  color: var(--colortiktok-green);
+  font-weight: 600;
+}
+
+.div-hero-bulletstwitter {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: row;
+  justify-content: start;
+  place-items: center start;
+  width: auto;
+  max-width: 540px;
+  display: flex;
+  background-color: var(--colortiktok-light-bg);
+  border: 1px solid #0000000d;
+  border-radius: 8px;
+  margin-top: 32px;
+  margin-bottom: 80px;
+  padding: 16px;
+}
+
+.div-hero-bullettwitter {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.p-hero-bullettwitter {
+  color: var(--colortiktok-light-gray);
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 0px;
+}
+
+.hero-pricing-wrappertwitter {
+  height: auto;
+  position: static;
+  inset: 0% 0% 0% auto;
+}
+
+.hero-pricing-containertwitter {
+  z-index: 2;
+  border: 3px none var(--colortiktok-black);
+  background-color: var(--colortiktok-dark-gray);
+  text-align: left;
+  background-image: url(https://cdn.prod.website-files.com/628d446…/63ff3f8…_socialplug-pricingbox-illustration.svg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 15px;
+  width: 450px;
+  max-width: 450px;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.pricing-header-copytwitter {
+  color: var(--colortiktok-text-light);
+  text-align: left;
+  background-color: transparent;
+  align-self: flex-end;
+  margin-bottom: 8px;
+  padding-right: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block;
+  position: static;
+}
+
+.green-line-pricingtwitter {
+  z-index: 1;
+  background-color: var(--colortiktok-green);
+  width: 100%;
+  height: 3px;
+  margin-top: -28px;
+  margin-bottom: 20px;
+  display: none;
+  position: static;
+}
+
+.div-pricingtwitter {
+  color: var(--colortiktok-white);
+  margin-top: 0;
+  display: flex;
+}
+
+.p-price-lgtwitter {
+  color: var(--colortiktok-white);
+  margin-bottom: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.pricing-secondary-texttwitter {
+  color: var(--colortiktok-green);
+  align-self: flex-end;
+  margin-top: 0;
+  margin-left: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.div-pricing-bulletstwitter {
+  margin-top: 24px;
+  display: block;
+}
+
+.div-bulletstwitter {
+  align-items: center;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.img-checkmarktwitter {
+  align-self: flex-start;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+
+.p-bullets-smtwitter {
+  color: var(--colortiktok-text-light);
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  position: relative;
+  top: -15px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.button-pricingtwitter {
+  background-color: var(--colortiktok-green);
+  background-image: linear-gradient(
+    to bottom,
+    var(--colortiktok-green),
+    var(--colortiktok-green-dark)
+  );
+  text-align: center;
+  letter-spacing: 0.3px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 24px;
+  padding: 18px 32px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  transition: all 0.3s;
+}
+
+.img-payment-icons-cardtwitter {
+  height: 24px;
+  margin: 24px auto 0;
+  display: block;
+}
+
+.w-buttontwitter {
+  color: var(--colortiktok-white);
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 45px;
+}
