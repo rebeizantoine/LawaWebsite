@@ -12,12 +12,12 @@ twitter {
 }
 
 .hero-section-servicestwitter {
-  background-color: var(--colortiktok-white);
+  background-color: var(--white);
   background-image: linear-gradient(
-      var(--colortiktok-white) 95%,
-      var(--colortiktok-white)
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
     ),
-    url("../Images/gridalignement.png");
+    url("../Images/twiitt.png");
   background-position: 0 0, 50%;
   background-size: auto, cover;
   align-items: flex-start;
@@ -27,6 +27,7 @@ twitter {
   display: block;
   position: relative;
   overflow: hidden;
+  margin-bottom: -60px;
 }
 
 .flex-containertwitter {
@@ -257,7 +258,8 @@ twitter {
   letter-spacing: 0.2px;
   margin-bottom: 0;
   position: relative;
-  top: -15px;
+  top: -8px;
+  left: 10px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -283,6 +285,9 @@ twitter {
   font-weight: 600;
   line-height: 16px;
   transition: all 0.3s;
+}
+.button-pricing:hover {
+  cursor: pointer;
 }
 
 .img-payment-icons-cardtwitter {

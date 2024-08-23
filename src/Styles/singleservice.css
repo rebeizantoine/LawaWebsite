@@ -1,7 +1,10 @@
 .hero-section-services-instagram {
   background-color: var(--white);
-  background-image: linear-gradient(#fffffff5, #fff),
-    url("../Images/gridalignement.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../Images/ilo.jpg");
   background-position: 0 0, 50%;
   background-size: auto, cover;
   align-items: flex-start;
@@ -241,6 +244,22 @@
   text-decoration: none;
 }
 .button-pricing-instagram {
+  background-color: #00c573;
+  background-image: linear-gradient(to bottom, #00c573, #01a55e);
+  text-align: center;
+  letter-spacing: 0.3px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 24px;
+  padding: 18px 32px;
+  font-family: "Nunito Sans", sans-serif;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  transition: all 0.3s;
+}
+.button-pricing {
   background-color: #00c573;
   background-image: linear-gradient(to bottom, #00c573, #01a55e);
   text-align: center;

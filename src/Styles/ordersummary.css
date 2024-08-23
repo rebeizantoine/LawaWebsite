@@ -1,0 +1,215 @@
+.order12-upvote-downvote-info {
+  display: flex;
+  margin-top: 0px;
+}
+
+.lefto {
+  color: black;
+  padding: 4rem 4rem 2rem 1.5rem;
+  font-family: "Nunito Sans", sans-serif !important;
+  max-width: 40%;
+  margin-top: 100px;
+}
+.rightooo {
+  width: 50%;
+  background-color: whitesmoke;
+  color: black;
+  padding: 4rem 4rem 2rem 1.5rem;
+  font-family: "Nunito Sans", sans-serif !important;
+  margin-top: 100px;
+}
+.pictua {
+  max-height: 70px;
+  max-width: 200px;
+  width: auto;
+}
+.order12-info-item {
+  list-style-type: none;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  scrollbar-width: thin;
+  font-family: "Nunito Sans", sans-serif !important;
+}
+.order12-section-title {
+  margin-top: 0;
+}
+.order12-help-link {
+  background-color: transparent;
+  color: #007bff;
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+.order12-form-label {
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+  width: 100%;
+  user-select: none;
+}
+order12-form-control {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #c9ced6;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: #42526e;
+  display: block;
+  font-size: 0.9rem;
+  height: calc(1.5em + 0.75rem + 2px);
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+.order12-help-block {
+  color: #6b778c;
+  display: block;
+  font-size: 0.81rem;
+  margin-top: 0.25rem;
+}
+
+.whats-included-items-wrapper-order123 {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.whats-included-items-wrapper-order123 svg {
+  margin-top: -30px;
+}
+.whats-included-item-order123 {
+  border: 1px solid white;
+}
+.whats-included-item-title-order123 {
+  font-weight: 900;
+}
+.p-3 {
+  border: 1px solid #10cf7f;
+  max-width: fit-content;
+  font-size: 14px;
+  width: 400px !important;
+  margin-left: 270px;
+}
+.pop {
+  border: 1px solid #10cf7f;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.flex {
+  display: flex;
+  width: 400px;
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.rounded {
+  border-radius: 0.25rem !important;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.payment-method-container-order123 {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.payment-method-container-order123 {
+  margin-top: 50px;
+}
+
+.payment-box-order123 {
+  width: 500px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 5px;
+}
+
+.payment-box-order123.selected-order123 {
+  border-color: green;
+  background-color: #f0f0f0;
+}
+
+.box-content-order123 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.box-title-order123 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.box-image-order123 img {
+  width: 40px;
+  height: 40px;
+}
+
+.circle-order123 {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.selected-circle-order123 {
+  background-color: green;
+}
+
+.payment-details-order123 {
+  padding: 10px;
+  animation: slideDown-order123 0.5s ease-in-out;
+}
+
+.payment-form-order123 label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.payment-form-order123 input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@keyframes slideDown-order123 {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.crypto-logos img {
+  width: 20px;
+  height: 20px;
+}
+.visaaa img {
+  width: 60px;
+  height: 20px;
+  margin-left: -40px;
+}
+.paypal img {
+  width: 60px;
+  height: 20px;
+}

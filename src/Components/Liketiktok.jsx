@@ -21,11 +21,8 @@ const Liketiktok = () => {
         <div className="w-layout-grid hero-grid-wrappertiktok">
           <div className="hero-text-blocktiktok">
             <h1 className="hero-h1tiktok">
-              Buy Instagram{" "}
-              <span className="title-span-greentiktok">
-                {" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;Likes
-              </span>
+              Buy Tiktok{" "}
+              <span className="title-span-greentiktok">&nbsp;Likes</span>
             </h1>
             <p className="hero-paragraphtiktok">
               <strong className="bold-text-4tiktok">

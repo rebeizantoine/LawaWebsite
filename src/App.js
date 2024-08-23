@@ -40,6 +40,9 @@ import Commentstwitter from "./Components/Commentstwitter";
 import Frequentlytwittercomments from "./Components/Frequentlytwittercomments";
 import Viewstwitter from "./Components/Viewstwitter";
 import FrequentlyTwitterComments from "./Components/Frequentlytwitterview";
+import OrderSummary from "./Components/Ordersummary";
+import Followertiktok from "./Components/Followertiktok";
+
 function App() {
   return (
     <div className="App">
@@ -69,6 +72,19 @@ function App() {
                 <Singleservice />
                 <Package />
                 <Frequently />
+                <Services />
+                <Footer />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/followertiktok"
+            element={
+              <>
+                <Header />
+                <Followertiktok />
+                <Package />
+                <Frequentlytiktok />
                 <Services />
                 <Footer />
               </>
@@ -185,6 +201,17 @@ function App() {
               </>
             }
           ></Route>
+          <Route
+            path="/order"
+            element={
+              <>
+                <Header />
+                <OrderSummary />
+                <Footer />
+              </>
+            }
+          ></Route>
+
           <Route
             path="/222"
             element={

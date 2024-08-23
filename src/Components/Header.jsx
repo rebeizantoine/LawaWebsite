@@ -93,7 +93,7 @@ const Header = () => {
                             alt="Twitter Free Content"
                             className="dropdown-image"
                           />
-                          <p>Twitter Views</p>
+                          <p>Instagram Views</p>
                         </a>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ const Header = () => {
                           />
                           <p>Twitter Comments</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/viewstwitter" className="dropdown-item">
                           <img
                             src={twitter}
                             alt="Twitter Free Content"
@@ -150,7 +150,7 @@ const Header = () => {
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Tiktok1</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="followertiktok" className="dropdown-item">
                           <img
                             src={tiktok}
                             alt="NFT Twitter Content"
@@ -158,7 +158,7 @@ const Header = () => {
                           />
                           <p>Tiktok Followers</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/liketiktok" className="dropdown-item">
                           <img
                             src={tiktok}
                             alt="NFT Twitter Content"

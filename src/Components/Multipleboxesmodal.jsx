@@ -1,4 +1,6 @@
 import React, { useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
+
 import "../Styles/multipleboxesmodal.css";
 import question from "../Images/question-mark.png";
 
@@ -44,6 +46,20 @@ const Multipleboxesmodal = ({ onClose }) => {
   const handleBoxClick = useCallback((value) => {
     setSelectedValue(value);
   }, []);
+  const location = useLocation();
+
+  const getDynamicText = () => {
+    if (location.pathname.includes("comment")) {
+      return "Comments";
+    } else if (location.pathname.includes("like")) {
+      return "Likes";
+    } else if (location.pathname.includes("follower")) {
+      return "Followers";
+    } else if (location.pathname.includes("view")) {
+      return "Views";
+    }
+    return ""; // Default text if no match
+  };
 
   const handleHighQualityClick = useCallback(() => {
     setBoxes(allBoxes);
@@ -56,6 +72,7 @@ const Multipleboxesmodal = ({ onClose }) => {
     setSelectedValue(limitedBoxes[0].value);
     setSelectedButton("limitedSelection");
   }, [limitedBoxes]);
+  const dynamicText = getDynamicText();
 
   return (
     <div
@@ -108,7 +125,7 @@ const Multipleboxesmodal = ({ onClose }) => {
                 onClick={() => handleBoxClick(box.value)}
               >
                 {box.label}
-                <p className="small-p">Save 50%</p>
+                <p className="small-p">{dynamicText}</p>
               </div>
             ))}
           </div>
