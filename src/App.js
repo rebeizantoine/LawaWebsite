@@ -15,7 +15,7 @@ import Modalpack from "./Components/Modalpack";
 import ModalPreview from "./Components/ModalPreview";
 import Modaljigga from "./Components/Modaljigga";
 import ShowJigga from "./Components/Showjigga";
-import Multipleboxesmodal from "./Components/Multipleboxesmodal";
+import MultipleBoxesModal from "./Components/Multipleboxesmodal";
 import Showmodalbutton from "./Components/Showmemodal";
 import Likeinsta from "./Components/Likeinsta";
 import Frequentlyinsta from "./Components/Frequentlyinsta";
@@ -42,250 +42,239 @@ import Viewstwitter from "./Components/Viewstwitter";
 import FrequentlyTwitterComments from "./Components/Frequentlytwitterview";
 import OrderSummary from "./Components/Ordersummary";
 import Followertiktok from "./Components/Followertiktok";
+import { CartProvider } from "./Components/Cartcontext";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Hero />
-                <Services />
-                <Whychoose />
-                {/* <Howtoorder /> */}
-                <Package />
-                <Howpay />
-                <Partners />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/sing"
-            element={
-              <>
-                <Header />
-                <Singleservice />
-                <Package />
-                <Frequently />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/followertiktok"
-            element={
-              <>
-                <Header />
-                <Followertiktok />
-                <Package />
-                <Frequentlytiktok />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/likesinsta"
-            element={
-              <>
-                <Header />
-                <Likeinsta />
-                <Package />
-                <Frequentlyinsta />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Viewsinsta"
-            element={
-              <>
-                <Header />
-                <Viewsinsta />
-                <Howtoorder />
-                <Frequentlyinstaview />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Viewstwitter"
-            element={
-              <>
-                <Header />
-                <Viewstwitter />
-                <Howtoorder />
-                <FrequentlyTwitterComments />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Commentsinsta"
-            element={
-              <>
-                <Header />
-                <Commentsinsta />
-                <Howtoorder />
-                <Frequentlyinstacomments />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Commentstiktok"
-            element={
-              <>
-                <Header />
-                <Commentstiktok />
-                <Howtoordertiktok />
-                <Frequentlytiktok />
-
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Commentstwitter"
-            element={
-              <>
-                <Header />
-                <Commentstwitter />
-                <Howtoordertwitterfollower />
-                <Frequentlytwittercomments />
-
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/packmodal"
-            element={
-              <>
-                {/* <Header /> */}
-                <ModalPreview />
-                {/* <Footer /> */}
-              </>
-            }
-          ></Route>
-
-          <Route
-            path="/packmodal2"
-            element={
-              <>
-                {/* <Header /> */}
-                <ShowJigga />
-                {/* <Footer /> */}
-              </>
-            }
-          ></Route>
-          <Route
-            path="/mult"
-            element={
-              <>
-                {/* <Header /> */}
-                <Multipleboxesmodal />
-                {/* <Footer /> */}
-              </>
-            }
-          ></Route>
-          <Route
-            path="/order"
-            element={
-              <>
-                <Header />
-                <OrderSummary />
-                <Footer />
-              </>
-            }
-          ></Route>
-
-          <Route
-            path="/222"
-            element={
-              <>
-                {/* <Header /> */}
-                <Showmodalbutton />
-                {/* <Footer /> */}
-              </>
-            }
-          ></Route>
-          <Route
-            path="/contactform"
-            element={
-              <>
-                <Header />
-                <ContactFormEmbed />
-                {/* <Footer /> */}
-              </>
-            }
-          ></Route>
-          <Route
-            path="/viewtiktok"
-            element={
-              <>
-                <Header />
-                <Viewstiktok />
-                <Howtoordertiktok />
-                <Frequentlytiktok />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/liketiktok"
-            element={
-              <>
-                <Header />
-                <Liketiktok />
-                <Howtoordertiktoklike />
-                <Frequentlytiktok />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/liketwitter"
-            element={
-              <>
-                <Header />
-                <Liketwitter />
-                <Howtoordertwitterlike />
-                <Frequentlytwitter />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-          <Route
-            path="/followertwitter"
-            element={
-              <>
-                <Header />
-                <Followertwitter />
-                <Howtoordertwitterfollower />
-                <Frequentlytwitterfollower />
-                <Services />
-                <Footer />
-              </>
-            }
-          ></Route>
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <Hero />
+                  <Services />
+                  <Whychoose />
+                  <Package />
+                  <Howpay />
+                  <Partners />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/followerinstagram"
+              element={
+                <>
+                  <Header />
+                  <Singleservice />
+                  <Package />
+                  <Frequently />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/followertiktok"
+              element={
+                <>
+                  <Header />
+                  <Followertiktok />
+                  <Package />
+                  <Frequentlytiktok />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/likesinsta"
+              element={
+                <>
+                  <Header />
+                  <Likeinsta />
+                  <Package />
+                  <Frequentlyinsta />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Viewsinsta"
+              element={
+                <>
+                  <Header />
+                  <Viewsinsta />
+                  <Howtoorder />
+                  <Frequentlyinstaview />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Viewstwitter"
+              element={
+                <>
+                  <Header />
+                  <Viewstwitter />
+                  <Howtoorder />
+                  <FrequentlyTwitterComments />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Commentsinsta"
+              element={
+                <>
+                  <Header />
+                  <Commentsinsta />
+                  <Howtoorder />
+                  <Frequentlyinstacomments />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Commentstiktok"
+              element={
+                <>
+                  <Header />
+                  <Commentstiktok />
+                  <Howtoordertiktok />
+                  <Frequentlytiktok />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Commentstwitter"
+              element={
+                <>
+                  <Header />
+                  <Commentstwitter />
+                  <Howtoordertwitterfollower />
+                  <Frequentlytwittercomments />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/packmodal"
+              element={
+                <>
+                  <ModalPreview />
+                </>
+              }
+            />
+            <Route
+              path="/packmodal2"
+              element={
+                <>
+                  <ShowJigga />
+                </>
+              }
+            />
+            <Route
+              path="/mult"
+              element={
+                <>
+                  <MultipleBoxesModal />
+                </>
+              }
+            />
+            <Route
+              path="/order"
+              element={
+                <>
+                  <Header />
+                  <OrderSummary />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/222"
+              element={
+                <>
+                  <Showmodalbutton />
+                </>
+              }
+            />
+            <Route
+              path="/contactform"
+              element={
+                <>
+                  <Header />
+                  <ContactFormEmbed />
+                </>
+              }
+            />
+            <Route
+              path="/viewtiktok"
+              element={
+                <>
+                  <Header />
+                  <Viewstiktok />
+                  <Howtoordertiktok />
+                  <Frequentlytiktok />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/liketiktok"
+              element={
+                <>
+                  <Header />
+                  <Liketiktok />
+                  <Howtoordertiktoklike />
+                  <Frequentlytiktok />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/liketwitter"
+              element={
+                <>
+                  <Header />
+                  <Liketwitter />
+                  <Howtoordertwitterlike />
+                  <Frequentlytwitter />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/followertwitter"
+              element={
+                <>
+                  <Header />
+                  <Followertwitter />
+                  <Howtoordertwitterfollower />
+                  <Frequentlytwitterfollower />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   );
 }

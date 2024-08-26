@@ -1,78 +1,121 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { useLocation } from "react-router-dom";
-
+import { useCart } from "./Cartcontext"; // Import the useCart hook
 import "../Styles/multipleboxesmodal.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import question from "../Images/question-mark.png";
 
-const Multipleboxesmodal = ({ onClose }) => {
+const allBoxes = [
+  { id: 1, label: "50", value: 10 },
+  { id: 2, label: "100", value: 20 },
+  { id: 3, label: "300", value: 30 },
+  { id: 4, label: "500", value: 40 },
+  { id: 5, label: "1000", value: 50 },
+  { id: 6, label: "2500", value: 60 },
+  { id: 7, label: "5000", value: 70 },
+  { id: 8, label: "10000", value: 80 },
+  { id: 9, label: "20000", value: 90 },
+  { id: 10, label: "40000", value: 100 },
+  { id: 11, label: "50000", value: 110 },
+  { id: 12, label: "100000", value: 120 },
+  { id: 13, label: "200000", value: 130 },
+  { id: 14, label: "400000", value: 140 },
+];
+
+const limitedBoxes = allBoxes.slice(0, 4);
+
+const MultipleBoxesModal = ({ onClose }) => {
+  const location = useLocation();
+  const { addToCart } = useCart();
+  const [boxes, setBoxes] = useState(allBoxes);
+  const [selectedValue, setSelectedValue] = useState(allBoxes[0].value);
+  const [selectedLabel, setSelectedLabel] = useState(allBoxes[0].label);
+  const [selectedButton, setSelectedButton] = useState("highQuality");
+
   useEffect(() => {
-    // Add event listener to close modal when clicking outside
     const handleOutsideClick = (e) => {
       if (e.target.classList.contains("modal-overlay")) {
         onClose();
       }
     };
+
     document.addEventListener("mousedown", handleOutsideClick);
 
-    // Cleanup event listener on unmount
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [onClose]);
 
-  const allBoxes = [
-    { id: 1, label: "50", value: 10 },
-    { id: 2, label: "100", value: 20 },
-    { id: 3, label: "300", value: 30 },
-    { id: 4, label: "500", value: 40 },
-    { id: 5, label: "1000", value: 50 },
-    { id: 6, label: "2500", value: 60 },
-    { id: 7, label: "5000", value: 70 },
-    { id: 8, label: "10000", value: 80 },
-    { id: 9, label: "20000", value: 90 },
-    { id: 10, label: "40000", value: 100 },
-    { id: 11, label: "50000", value: 110 },
-    { id: 12, label: "100000", value: 120 },
-    { id: 13, label: "200000", value: 130 },
-    { id: 14, label: "400000", value: 140 },
-  ];
-
-  const limitedBoxes = allBoxes.slice(0, 4);
-
-  const [boxes, setBoxes] = React.useState(allBoxes);
-  const [selectedValue, setSelectedValue] = React.useState(boxes[0].value);
-  const [selectedButton, setSelectedButton] = React.useState("highQuality");
-
-  const handleBoxClick = useCallback((value) => {
-    setSelectedValue(value);
-  }, []);
-  const location = useLocation();
-
   const getDynamicText = () => {
-    if (location.pathname.includes("comment")) {
-      return "Comments";
-    } else if (location.pathname.includes("like")) {
-      return "Likes";
-    } else if (location.pathname.includes("follower")) {
-      return "Followers";
-    } else if (location.pathname.includes("view")) {
-      return "Views";
+    if (
+      location.pathname.includes("insta") &&
+      location.pathname.includes("like")
+    ) {
+      return "Instagram Likes";
+    } else if (
+      location.pathname.includes("insta") &&
+      location.pathname.includes("follower")
+    ) {
+      return "Instagram Followers";
+    } else if (
+      location.pathname.includes("tiktok") &&
+      location.pathname.includes("like")
+    ) {
+      return "TikTok Likes";
+    } else if (
+      location.pathname.includes("tiktok") &&
+      location.pathname.includes("follower")
+    ) {
+      return "TikTok Followers";
+    } else if (
+      location.pathname.includes("twitter") &&
+      location.pathname.includes("like")
+    ) {
+      return "Twitter Likes";
+    } else if (
+      location.pathname.includes("twitter") &&
+      location.pathname.includes("follower")
+    ) {
+      return "Twitter Followers";
     }
-    return ""; // Default text if no match
+    return "";
   };
+
+  const dynamicText = getDynamicText();
+
+  const handleBoxClick = useCallback((value, label) => {
+    setSelectedValue(value);
+    setSelectedLabel(label);
+  }, []);
 
   const handleHighQualityClick = useCallback(() => {
     setBoxes(allBoxes);
     setSelectedValue(allBoxes[0].value);
+    setSelectedLabel(allBoxes[0].label);
     setSelectedButton("highQuality");
-  }, [allBoxes]);
+  }, []);
 
   const handleLimitedSelectionClick = useCallback(() => {
     setBoxes(limitedBoxes);
     setSelectedValue(limitedBoxes[0].value);
+    setSelectedLabel(limitedBoxes[0].label);
     setSelectedButton("limitedSelection");
-  }, [limitedBoxes]);
-  const dynamicText = getDynamicText();
+  }, []);
+  const handleOrderNowClick = () => {
+    if (selectedValue) {
+      const orderData = {
+        service: dynamicText || "Default Service",
+        quantity: selectedLabel,
+        price: selectedValue,
+      };
+      addToCart(orderData); // Add the selected item to the cart
+      toast.success("Package added to cart!"); // Show the toast notification
+    } else {
+      // Handle case where no value is selected
+      console.log("Please select an option");
+    }
+  };
 
   return (
     <div
@@ -122,7 +165,7 @@ const Multipleboxesmodal = ({ onClose }) => {
                 className={`mini-box123 ${
                   selectedValue === box.value ? "selected123" : ""
                 }`}
-                onClick={() => handleBoxClick(box.value)}
+                onClick={() => handleBoxClick(box.value, box.label)}
               >
                 {box.label}
                 <p className="small-p">{dynamicText}</p>
@@ -134,7 +177,9 @@ const Multipleboxesmodal = ({ onClose }) => {
               <p className="flexy-1">$</p>
               <p className="flexy-2">{selectedValue}</p>
             </div>
-            <button className="order-button123">Order Now</button>
+            <button className="order-button123" onClick={handleOrderNowClick}>
+              Add to Cart
+            </button>
           </div>
           <div className="features-block">
             <div className="features-item">
@@ -198,9 +243,10 @@ const Multipleboxesmodal = ({ onClose }) => {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );
 };
 
-export default Multipleboxesmodal;
+export default MultipleBoxesModal;

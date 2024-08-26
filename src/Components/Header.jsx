@@ -1,16 +1,37 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "./Cartcontext"; // Import the useCart hook
 import "../Styles/header.css";
 import instagram from "../Images/icons8-instagram-48.png";
 import tiktok from "../Images/icons8-tiktok-50.png";
 import twitch from "../Images/icons8-twitch-48.png";
 import twitter from "../Images/icons8-twitter-48.png";
+import carto from "../Images/carto.svg";
+import CartPopup from "./Cartpopup";
+import MultipleBoxesModal from "./Multipleboxesmodal"; // Ensure the name matches your file
 
 const Header = () => {
   const navigate = useNavigate();
-  const handleallservice = () => {
+  const { cartItems, addToCart } = useCart(); // Use context for cartItems
+
+  const [showCartPopup, setShowCartPopup] = React.useState(false);
+  const [showMultipleBoxesModal, setShowMultipleBoxesModal] =
+    React.useState(false);
+
+  const handleAllService = () => {
     navigate("/");
   };
+
+  const handleCartClick = () => {
+    console.log("Cart icon clicked"); // Debugging line
+    setShowCartPopup(!showCartPopup);
+  };
+
+  const handleMultipleBoxesModal = () => {
+    console.log("Multiple boxes modal clicked"); // Debugging line
+    setShowMultipleBoxesModal(!showMultipleBoxesModal);
+  };
+
   return (
     <div>
       <div className="banner">
@@ -19,40 +40,36 @@ const Header = () => {
             <div className="notification">
               <img
                 src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6625576b94bb460b0ced2680_support-icon-notification2.svg"
-                alt=""
+                alt="Support Icon"
               />
               <p className="p-notification-bar">24/7 Customer Support</p>
             </div>
             <div className="notification">
               <img
                 src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6625576bd06cde381996da78_flash-icon.svg"
-                alt=""
+                alt="Flash Icon"
               />
               <p className="p-notification-bar">Instant Delivery</p>
             </div>
             <div className="notification">
               <img
                 src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6625576baa7a5e9b41f90e3a_star-icon.svg"
-                alt=""
+                alt="Star Icon"
               />
               <p className="p-notification-bar">Trusted by 100k+ Customers</p>
             </div>
           </div>
         </section>
         <div className="container-default-2">
-          <div className="header-content-wrapper">
-            <a href="">
-              <img src="" alt="" />
-            </a>
-          </div>
+          <div className="header-content-wrapper"></div>
           <div className="header-middle">
             <nav className="header-nav-menu-wrapper">
               <ul className="header-nav-menu-list">
                 <img
                   src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
                   className="social-logo"
-                  onClick={handleallservice}
-                  alt=""
+                  onClick={handleAllService}
+                  alt="Socialplug Logo"
                 />
                 <li className="header-nav-list-item">
                   Instagram <span className="dropdown-arrow">expand_more</span>
@@ -60,10 +77,10 @@ const Header = () => {
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Instagram1</h3>
-                        <a href="/sing" className="dropdown-item">
+                        <a href="/followerinstagram" className="dropdown-item">
                           <img
                             src={instagram}
-                            alt="NFT Twitter Content"
+                            alt="Instagram Followers"
                             className="dropdown-image"
                           />
                           <p>Instagram Followers</p>
@@ -71,7 +88,7 @@ const Header = () => {
                         <a href="/likesinsta" className="dropdown-item">
                           <img
                             src={instagram}
-                            alt="NFT Twitter Content"
+                            alt="Instagram Likes"
                             className="dropdown-image"
                           />
                           <p>Instagram Likes</p>
@@ -82,7 +99,7 @@ const Header = () => {
                         <a href="/commentsinsta" className="dropdown-item">
                           <img
                             src={instagram}
-                            alt="Twitter Free Content"
+                            alt="Instagram Comments"
                             className="dropdown-image"
                           />
                           <p>Instagram Comments</p>
@@ -90,7 +107,7 @@ const Header = () => {
                         <a href="/Viewsinsta" className="dropdown-item">
                           <img
                             src={instagram}
-                            alt="Twitter Free Content"
+                            alt="Instagram Views"
                             className="dropdown-image"
                           />
                           <p>Instagram Views</p>
@@ -108,7 +125,7 @@ const Header = () => {
                         <a href="/followertwitter" className="dropdown-item">
                           <img
                             src={twitter}
-                            alt="NFT Twitter Content"
+                            alt="Twitter Followers"
                             className="dropdown-image"
                           />
                           <p>Twitter Followers</p>
@@ -116,7 +133,7 @@ const Header = () => {
                         <a href="/liketwitter" className="dropdown-item">
                           <img
                             src={twitter}
-                            alt="NFT Twitter Content"
+                            alt="Twitter Likes"
                             className="dropdown-image"
                           />
                           <p>Twitter Likes</p>
@@ -127,7 +144,7 @@ const Header = () => {
                         <a href="/Commentstwitter" className="dropdown-item">
                           <img
                             src={twitter}
-                            alt="Twitter Free Content"
+                            alt="Twitter Comments"
                             className="dropdown-image"
                           />
                           <p>Twitter Comments</p>
@@ -135,7 +152,7 @@ const Header = () => {
                         <a href="/viewstwitter" className="dropdown-item">
                           <img
                             src={twitter}
-                            alt="Twitter Free Content"
+                            alt="Twitter Views"
                             className="dropdown-image"
                           />
                           <p>Twitter Views</p>
@@ -150,10 +167,10 @@ const Header = () => {
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Tiktok1</h3>
-                        <a href="followertiktok" className="dropdown-item">
+                        <a href="/followertiktok" className="dropdown-item">
                           <img
                             src={tiktok}
-                            alt="NFT Twitter Content"
+                            alt="Tiktok Followers"
                             className="dropdown-image"
                           />
                           <p>Tiktok Followers</p>
@@ -161,7 +178,7 @@ const Header = () => {
                         <a href="/liketiktok" className="dropdown-item">
                           <img
                             src={tiktok}
-                            alt="NFT Twitter Content"
+                            alt="Tiktok Likes"
                             className="dropdown-image"
                           />
                           <p>Tiktok Likes</p>
@@ -172,7 +189,7 @@ const Header = () => {
                         <a href="/commentstiktok" className="dropdown-item">
                           <img
                             src={tiktok}
-                            alt="Twitter Free Content"
+                            alt="Tiktok Comments"
                             className="dropdown-image"
                           />
                           <p>Tiktok Comments</p>
@@ -180,7 +197,7 @@ const Header = () => {
                         <a href="/viewtiktok" className="dropdown-item">
                           <img
                             src={tiktok}
-                            alt="Twitter Free Content"
+                            alt="Tiktok Views"
                             className="dropdown-image"
                           />
                           <p>Tiktok Views</p>
@@ -198,7 +215,7 @@ const Header = () => {
                         <a href="#" className="dropdown-item">
                           <img
                             src={twitch}
-                            alt="NFT Twitter Content"
+                            alt="Twitch Followers"
                             className="dropdown-image"
                           />
                           <p>Twitch Followers</p>
@@ -206,42 +223,34 @@ const Header = () => {
                         <a href="#" className="dropdown-item">
                           <img
                             src={twitch}
-                            alt="NFT Twitter Content"
+                            alt="Twitch Views"
                             className="dropdown-image"
                           />
                           <p>Twitch Views</p>
                         </a>
                       </div>
-                      {/* <div className="grid-section">
-                        <h3>Twitch2</h3>
-                        <a href="#" className="dropdown-item">
-                          <img
-                            src={twitch}
-                            alt="Twitter Free Content"
-                            className="dropdown-image"
-                          />
-                          <p>Twitter Free Item 1</p>
-                        </a>
-                        <a href="#" className="dropdown-item">
-                          <img
-                            src={twitch}
-                            alt="Twitter Free Content"
-                            className="dropdown-image"
-                          />
-                          <p>Twitter Free Item 2</p>
-                        </a>
-                      </div> */}
                     </div>
                   </div>
                 </li>
-                <button className="all-services" onClick={handleallservice}>
+                <button className="all-services" onClick={handleAllService}>
                   All Services
                 </button>
+                <div className="cart-icon" onClick={handleCartClick}>
+                  <img src={carto} alt="Cart" />
+                  <span className="cart-counter">{cartItems.length}</span>{" "}
+                  {/* Ensure cartItems is defined */}
+                </div>
               </ul>
             </nav>
           </div>
         </div>
       </div>
+      {showCartPopup && (
+        <CartPopup items={cartItems} onClose={() => setShowCartPopup(false)} />
+      )}
+      {showMultipleBoxesModal && (
+        <MultipleBoxesModal onClose={() => setShowMultipleBoxesModal(false)} />
+      )}
     </div>
   );
 };

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import "../Styles/ordersummary.css";
+import { useNavigate } from "react-router-dom";
+
 import bitcoin from "../Images/bitcoin.png";
 import tether from "../Images/tether-usdt-logo.png";
 import etherium from "../Images/ethereum-eth-logo.png";
@@ -9,11 +13,15 @@ import visa from "../Images/visa_PNG391.png";
 import paypal from "../Images/paypal-logo-2.png";
 
 function Ordersummary() {
-  const [selectedMethod, setSelectedMethod] = useState("");
+  const location = useLocation();
+  const { cartItems, totalAmount } = location.state || {}; // Fetch cart data from location state
+
+  const [selectedMethod, setSelectedMethod] = React.useState("");
 
   const handleMethodChange = (method) => {
     setSelectedMethod(method);
   };
+  const navigate = useNavigate();
   return (
     <div className="order12-upvote-downvote-info">
       <div className="lefto">
@@ -88,7 +96,7 @@ function Ordersummary() {
             Need help?{" "}
             <a
               className="order12-help-link"
-              href="https://panel.socialplug.io/contact/helpdesk"
+              href="/contactform"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -96,33 +104,33 @@ function Ordersummary() {
             </a>
           </p>
           {/* <div
-            class="order12-form-group order12-form-group-lg"
-            data-field="219"
-          >
-            <label for="email" class="order12-form-label">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="order12-form-control"
-              placeholder=""
-              value=""
-              autocomplete="email"
-              required
-            />
-            <div class="order12-help-block">
-              Already have an account?{" "}
-              <a
-                href="https://panel.socialplug.io/login"
-                class="order12-help-link"
-              >
-                Sign in here
-              </a>
-              .
-            </div>
-          </div> */}
+              class="order12-form-group order12-form-group-lg"
+              data-field="219"
+            >
+              <label for="email" class="order12-form-label">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="order12-form-control"
+                placeholder=""
+                value=""
+                autocomplete="email"
+                required
+              />
+              <div class="order12-help-block">
+                Already have an account?{" "}
+                <a
+                  href="https://panel.socialplug.io/login"
+                  class="order12-help-link"
+                >
+                  Sign in here
+                </a>
+                .
+              </div>
+            </div> */}
         </div>
       </div>
       <div className="rightooo">
@@ -130,35 +138,31 @@ function Ordersummary() {
           <div class="invoice-items-order123" id="preview">
             <h2 class="mb-4-order123">Order Summary</h2>
             <div class="p-3 flex flex-column gap-2 rounded">
-              <div class="flex flex-row justify-between w-full">
-                <div>
-                  <div class="text-500">Service</div>
-                </div>
-                <div>Twitter NFT Retweets</div>
+              {cartItems && cartItems.length > 0 ? (
+                cartItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-row justify-between w-full"
+                  >
+                    <div>
+                      <div className="text-500">Service</div>
+                    </div>
+                    <div>{item.service}</div>
+                  </div>
+                ))
+              ) : (
+                <p>No items in the cart.</p>
+              )}
+              <div className="flex flex-row justify-between w-full">
+                <div className="text-500">Quantity</div>
+                <div>{cartItems.reduce((acc, item) => item.quantity, 0)}</div>
               </div>
-              <div class="flex flex-row justify-between w-full">
-                <div class="text-500">Quantity</div>
-                <div>1</div>
-              </div>
-              <div class="flex flex-row justify-between w-full">
-                <span class="text-500">Number of Retweets</span>
-                <span>500 Retweets</span>
-              </div>
-            </div>
-
-            <div class="cart-contents-order123">
-              <div class="mb-4-order123 flex-order123 flex-column-order123 gap-4-order123"></div>
-
-              <hr />
-
-              <div class="mb-4-order123 d-flex-order123 justify-content-between-order123">
-                <div>
-                  <div class="text-500-order123 text-title-order123">Total</div>
-                  <div class="text-muted-order123">USD</div>
-                </div>
-
-                <div class="text-right-order123">
-                  <h2 class="margin-0-order123">$0.00</h2>
+              <div className="flex flex-row justify-between w-full">
+                <span className="text-500">Total</span>
+                <div className="text-right-order123">
+                  <h2 className="margin-0-order123">
+                    ${totalAmount.toFixed(2)}
+                  </h2>
                 </div>
               </div>
             </div>

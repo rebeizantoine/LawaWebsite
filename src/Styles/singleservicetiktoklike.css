@@ -18,7 +18,7 @@
       rgba(255, 255, 255, 0.8)
     ),
     url("../Images/2633.jpg");
-  background-position: 0 0, 50%;
+  background-position: 150px center; /* Adjust the value in pixels */
   background-size: auto, cover;
   align-items: flex-start;
   height: auto;
