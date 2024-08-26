@@ -277,3 +277,11 @@
   padding: 0;
   margin: 0;
 }
+.mini-box123:nth-child(13) {
+  position: relative;
+  left: 80px;
+}
+.mini-box123:nth-child(14) {
+  position: relative;
+  left: 80px;
+}

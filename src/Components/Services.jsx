@@ -75,35 +75,20 @@ const Services = () => {
             <a href="/services/buy-twitter-followers" className="service-link">
               Twitter Followers
             </a>
-            <a
-              href="/services/buy-usa-twitter-followers"
-              className="service-link"
-            >
+            <a href="/followertwitter" className="service-link">
               Twitter USA Followers
             </a>
-            <a href="/services/buy-twitter-likes" className="service-link">
+            <a href="/liketwitter" className="service-link">
               Twitter Likes
             </a>
             <a href="/services/buy-twitter-retweets" className="service-link">
               Twitter Retweets
             </a>
-            <a href="/services/buy-twitter-views" className="service-link">
+            <a href="/Viewstwitter" className="service-link">
               Twitter Views
             </a>
-            <a
-              href="/services/buy-twitter-impressions"
-              className="service-link"
-            >
-              Twitter Impressions
-            </a>
-            <a
-              href="/services/buy-twitter-spaces-listeners"
-              className="service-link"
-            >
-              Twitter Spaces Listeners
-            </a>
-            <a href="/services/buy-twitter-poll-votes" className="service-link">
-              Twitter Poll Votes
+            <a href="/Commentstwitter" className="service-link">
+              Twitter Comments
             </a>
           </div>
 
@@ -115,22 +100,14 @@ const Services = () => {
               className="icon-image"
             />
             <div className="feature-header">Instagram</div>
-            <a
-              href="/services/buy-instagram-followers"
-              className="service-link"
-            >
+            <a href="/followerinstagram" className="service-link">
               Instagram Followers
             </a>
-            <a href="/services/buy-instagram-likes" className="service-link">
+            <a href="/likesinsta" className="service-link">
               Instagram Likes
             </a>
-            <a
-              href="/services/buy-instagram-auto-likes"
-              className="service-link"
-            >
-              Instagram Auto Likes
-            </a>
-            <a href="/services/buy-instagram-views" className="service-link">
+
+            <a href="/Viewsinsta" className="service-link">
               Instagram Views
             </a>
             <a
@@ -170,20 +147,17 @@ const Services = () => {
               className="icon-image"
             />
             <div className="feature-header">TikTok</div>
-            <a href="/services/buy-tiktok-likes" className="service-link">
+            <a href="/liketiktok" className="service-link">
               TikTok Likes
             </a>
-            <a href="/services/buy-tiktok-views" className="service-link">
+            <a href="/viewtiktok" className="service-link">
               TikTok Views
             </a>
-            <a
-              href="/services/buy-tiktok-custom-comments"
-              className="service-link"
-            >
-              TikTok Custom Comments
+            <a href="/Commentstiktok" className="service-link">
+              TikTok Comments
             </a>
-            <a href="/services/buy-tiktok-auto-views" className="service-link">
-              TikTok Auto Views
+            <a href="/followertiktok" className="service-link">
+              Tiktok Followers
             </a>
           </div>
 
@@ -201,32 +175,9 @@ const Services = () => {
           </div>
 
           {/* Reddit Services */}
-          <div className="feature-grid-block">
-            <img
-              src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/628f7ff7f42d3c46b0da7709_reddit-icon.png"
-              alt="Reddit Services"
-              className="icon-image"
-            />
-            <div className="feature-header">Reddit</div>
-            <a href="/services/buy-reddit-upvotes" className="service-link">
-              Reddit Post / Comment Upvotes
-            </a>
-            <a href="/services/buy-reddit-awards" className="service-link">
-              Reddit Post / Comment Awards
-            </a>
-            <a href="/services/buy-reddit-downvotes" className="service-link">
-              Reddit Post / Comment Downvotes
-            </a>
-            <a href="/services/buy-reddit-subscribers" className="service-link">
-              Reddit Subscribers
-            </a>
-            <a href="/services/buy-reddit-comments" className="service-link">
-              Reddit Comments
-            </a>
-          </div>
 
           {/* Spotify Services */}
-          <div className="feature-grid-block">
+          {/* <div className="feature-grid-block">
             <img
               src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643c6281e4f9df2eace7f50b_spotify-logo-socialplug.webp"
               alt="Spotify Services"
@@ -251,10 +202,10 @@ const Services = () => {
             >
               Spotify Playlist Followers
             </a>
-          </div>
+          </div> */}
 
           {/* LinkedIn Services */}
-          <div className="feature-grid-block">
+          {/* <div className="feature-grid-block">
             <img
               src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6474d2dde02948e47151cb3c_Linkedin-icon.svg"
               alt="LinkedIn Services"
@@ -276,7 +227,7 @@ const Services = () => {
             <a href="/services/buy-linkedin-comments" className="service-link">
               LinkedIn Comments
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
