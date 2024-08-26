@@ -59,6 +59,16 @@ const MultipleBoxesModal = ({ onClose }) => {
     ) {
       return "Instagram Followers";
     } else if (
+      location.pathname.includes("insta") &&
+      location.pathname.includes("Comment")
+    ) {
+      return "Instagram Comments";
+    } else if (
+      location.pathname.includes("insta") &&
+      location.pathname.includes("View")
+    ) {
+      return "Instagram Views";
+    } else if (
       location.pathname.includes("tiktok") &&
       location.pathname.includes("like")
     ) {
@@ -69,6 +79,16 @@ const MultipleBoxesModal = ({ onClose }) => {
     ) {
       return "TikTok Followers";
     } else if (
+      location.pathname.includes("tiktok") &&
+      location.pathname.includes("Comment")
+    ) {
+      return "TikTok Comments";
+    } else if (
+      location.pathname.includes("tiktok") &&
+      location.pathname.includes("View")
+    ) {
+      return "TikTok Views";
+    } else if (
       location.pathname.includes("twitter") &&
       location.pathname.includes("like")
     ) {
@@ -78,7 +98,18 @@ const MultipleBoxesModal = ({ onClose }) => {
       location.pathname.includes("follower")
     ) {
       return "Twitter Followers";
+    } else if (
+      location.pathname.includes("twitter") &&
+      location.pathname.includes("Comment")
+    ) {
+      return "Twitter Comments";
+    } else if (
+      location.pathname.includes("twitter") &&
+      location.pathname.includes("View")
+    ) {
+      return "Twitter Views";
     }
+
     return "";
   };
 

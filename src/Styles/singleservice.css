@@ -275,6 +275,13 @@
   line-height: 16px;
   transition: all 0.3s;
 }
+.button-pricing-instagram w-button {
+  transition: transform 0.3s ease;
+}
+.button-pricing-instagram w-button:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
 .img-payment-icons-card-instagram {
   height: 24px;
   margin: 24px auto 0;
