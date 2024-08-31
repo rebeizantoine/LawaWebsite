@@ -21,10 +21,10 @@ const Commentstwitter = () => {
         <div className="w-layout-grid hero-grid-wrappertwitter">
           <div className="hero-text-blocktwitter">
             <h1 className="hero-h1twitter">
-              Buy Tiktok{" "}
+              Buy Twitter{" "}
               <span className="title-span-greentwitter">
                 {" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;Comments
+                &nbsp;&nbsp;Comments
               </span>
             </h1>
             <p className="hero-paragraphtwitter">

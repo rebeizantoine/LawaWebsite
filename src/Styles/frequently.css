@@ -125,3 +125,72 @@
   line-height: 28px;
   margin: 0;
 }
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 40px 2%;
+  }
+
+  .content-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .h2.h2-centre {
+    max-width: 100%;
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+    margin: 40px auto 0;
+  }
+
+  .accordion-item {
+    width: 90%;
+    padding: 16px 24px; /* Reduce padding for smaller screens */
+    margin-left: -5px;
+  }
+  .accordion-item-wrapper:nth-child(4) {
+    width: 350px;
+    position: relative;
+    left: -0px;
+  }
+
+  .accordion-item-wrapper:nth-child(7) {
+    position: static;
+    left: 0;
+  }
+
+  .accordion-arrow-wrap {
+    width: 24px;
+    height: 24px;
+  }
+
+  .accordion-arrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .arrow-line {
+    width: 1px;
+    height: 12px;
+  }
+
+  .faq-paragraph {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 24px;
+  }
+  .h2.h2-centre {
+    color: #14141b;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px; /* Adjust font size for smaller screens */
+    line-height: 1.3; /* Adjust line height for better spacing */
+    max-width: 100%; /* Ensure full width for mobile */
+    margin: 0 auto; /* Center the title */
+    margin-top: 50px;
+  }
+}

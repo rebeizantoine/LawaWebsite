@@ -30,10 +30,18 @@ const CartPopup = ({ items, onClose }) => {
 
   // Function to calculate the total price of items in the cart
   const calculateTotalPrice = () => {
-    return items.reduce((total, item) => total + item.price, 0);
+    return items.reduce((total, item) => {
+      const price = parseFloat(item.price) || 0; // Ensure the price is a number
+      return total + price;
+    }, 0);
   };
 
   const totalAmount = calculateTotalPrice();
+
+  // Ensure totalAmount is a number
+  const totalAmountFormatted = isNaN(totalAmount)
+    ? "0.00"
+    : totalAmount.toFixed(2);
   const handleOrderSummary = () => {
     navigate("/order", { state: { cartItems: items, totalAmount } });
   };

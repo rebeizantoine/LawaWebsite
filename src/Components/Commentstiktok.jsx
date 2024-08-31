@@ -22,10 +22,7 @@ const Commentstiktok = () => {
           <div className="hero-text-blocktiktok">
             <h1 className="hero-h1tiktok">
               Buy Tiktok{" "}
-              <span className="title-span-greentiktok">
-                {" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;Comments
-              </span>
+              <span className="title-span-greentiktok"> Comments</span>
             </h1>
             <p className="hero-paragraphtiktok">
               <strong className="bold-text-4tiktok">

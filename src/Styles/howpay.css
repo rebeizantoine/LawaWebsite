@@ -82,3 +82,22 @@
   text-decoration: underline;
   background-color: #0000;
 }
+@media (max-width: 601px) {
+  .flex-container.horizontal {
+    flex-direction: row; /* Restore row layout for larger screens */
+    display: none;
+  }
+
+  .grid-faq {
+    grid-template-columns: 1fr 1fr; /* Restore two-column layout */
+    grid-column-gap: 60px;
+    grid-row-gap: 49px;
+  }
+
+  .h2 {
+    font-size: 42px; /* Restore original font size */
+  }
+  .how-it-works {
+    display: none;
+  }
+}

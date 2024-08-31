@@ -59,3 +59,8 @@
   margin-right: auto;
   display: block;
 }
+@media screen and (max-width: 600px) {
+  .content-section-4 {
+    display: none ;
+  }
+}

@@ -99,3 +99,61 @@
   display: inline-block;
   margin-left: 50px;
 }
+@media (max-width: 600px) {
+  .content-section1 {
+    padding: 40px 2%;
+    border-bottom: none; /* Optionally remove border on small screens */
+    margin-top: 40px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .standard-paragraph.center {
+    max-width: 100%;
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 24px; /* Adjust line height for smaller screens */
+    margin-bottom: 16px;
+  }
+
+  .how-it-works-grid {
+    grid-column-gap: 20px; /* Reduce gap between columns */
+    grid-row-gap: 40px; /* Reduce gap between rows */
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+    margin: 40px auto 0;
+  }
+
+  .div-how-container {
+    text-align: center;
+  }
+
+  .p-how-it-works-nr {
+    width: 40px; /* Adjust size for smaller screens */
+    height: 36px;
+    font-size: 18px;
+    padding: 6px 8px; /* Adjust padding for smaller screens */
+  }
+
+  .p-how-heading {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 24px; /* Adjust line height for smaller screens */
+  }
+
+  .standard-paragraph.center.p-sm {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 24px; /* Adjust line height for smaller screens */
+    margin-top: 12px;
+  }
+
+  .img-how-to-order-line {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+    margin-left: 0; /* Center image */
+    margin-top: 20px; /* Add space above image */
+  }
+  .img-how-to-order-line {
+    display: none;
+  }
+}

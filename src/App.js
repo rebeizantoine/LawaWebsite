@@ -43,6 +43,14 @@ import FrequentlyTwitterComments from "./Components/Frequentlytwitterview";
 import OrderSummary from "./Components/Ordersummary";
 import Followertiktok from "./Components/Followertiktok";
 import { CartProvider } from "./Components/Cartcontext";
+import Followertwitch from "./Components/Followertwitch";
+import Frequentlytwitch from "./Components/Frequentlytwitch";
+import Howtoordertwitchlike from "./Components/Howtoordertwitchlike";
+import Viewstwitch from "./Components/Viewstwitch";
+import Howtoordertwitchview from "./Components/Howtoordertwitchview";
+import Frequentlytwitchview from "./Components/Frequentlytwitchview";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import OrderDash from "./Components/Dashboard/Orderdash";
 
 function App() {
   return (
@@ -268,6 +276,52 @@ function App() {
                   <Howtoordertwitterfollower />
                   <Frequentlytwitterfollower />
                   <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/followertwitch"
+              element={
+                <>
+                  <Header />
+                  <Followertwitch />
+                  <Howtoordertwitchlike />
+                  <Frequentlytwitch />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/viewtwitch"
+              element={
+                <>
+                  <Header />
+                  <Viewstwitch />
+                  <Howtoordertwitchview />
+                  <Frequentlytwitchview />
+                  <Services />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <>
+                  {/* <Header /> */}
+                  <Dashboard />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/orderdash"
+              element={
+                <>
+                  {/* <Header /> */}
+                  <OrderDash />
                   <Footer />
                 </>
               }

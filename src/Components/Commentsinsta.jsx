@@ -24,7 +24,7 @@ const Commentsinsta = () => {
               Buy Instagram{" "}
               <span className="title-span-green-instagram">
                 {" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;Comments
+                &nbsp;&nbsp;Comments
               </span>
             </h1>
             <p className="hero-paragraph-instagram">

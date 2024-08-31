@@ -151,3 +151,54 @@
 .footer-section a:hover {
   color: #00c573;
 }
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack all footer blocks in a single column */
+    grid-row-gap: 24px; /* Increase gap between rows */
+    text-align: center; /* Center text for better mobile appearance */
+  }
+
+  .footer-block {
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text within each block */
+  }
+
+  .footer-logo {
+    width: 120px; /* Reduce logo size */
+  }
+
+  .p-footer,
+  .footer-title,
+  .paragraph-basic._40-bottom-padding,
+  .p-footer-bottom {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 22px;
+  }
+
+  .footer-socials-container {
+    justify-content: center; /* Center social icons */
+    margin-bottom: 24px; /* Adjust bottom margin */
+  }
+
+  .a-social-footer {
+    width: 32px; /* Increase icon size for better touch targets */
+    margin: 0 8px; /* Add margin between icons */
+  }
+
+  .footer-bottom-bar {
+    padding: 16px 5%; /* Add padding for better spacing on smaller screens */
+  }
+
+  .container-footer-bottom {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    text-align: center;
+  }
+
+  .img-payment-icons {
+    margin-top: 12px; /* Add margin between text and payment icons */
+  }
+  .content-section3 {
+    display: none;
+  }
+}

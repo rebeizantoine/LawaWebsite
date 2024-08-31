@@ -22,7 +22,7 @@
   text-align: left;
   margin-top: 0;
   margin-bottom: 16px;
-  font-family: Clashdisplay, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 45px;
@@ -57,7 +57,7 @@
   color: #14114b;
   text-align: left;
   margin-bottom: 12px;
-  font-family: Clashdisplay, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 21px;
   font-weight: 600;
   line-height: 34px;
@@ -78,4 +78,33 @@
 
   grid-auto-columns: 1fr;
   display: grid;
+}
+@media screen and (max-width: 479px) {
+  .grid-all-services {
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+    grid-template-columns: 1fr;
+    margin-top: 56px;
+  }
+  .feature-grid-block {
+    outline-color: var(--main-green);
+    outline-offset: 0px;
+    outline-width: 3px;
+    outline-style: none;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .icon-image {
+    width: 64px;
+    margin-top: -48px;
+  }
+  .feature-header {
+    color: var(--midnight-blue-2);
+    font-size: 24px;
+    line-height: 24px;
+    color: #14114b;
+    text-align: left;
+    font-family: "Nunito Sans", sans-serif;
+  }
 }

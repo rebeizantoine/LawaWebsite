@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "./Cartcontext"; // Import the useCart hook
 import "../Styles/header.css";
@@ -13,10 +13,13 @@ import MultipleBoxesModal from "./Multipleboxesmodal"; // Ensure the name matche
 const Header = () => {
   const navigate = useNavigate();
   const { cartItems, addToCart } = useCart(); // Use context for cartItems
+  const [showSidebar, setShowSidebar] = useState(false); // State for sidebar visibility
 
   const [showCartPopup, setShowCartPopup] = React.useState(false);
   const [showMultipleBoxesModal, setShowMultipleBoxesModal] =
     React.useState(false);
+
+  const [activeDropdown, setActiveDropdown] = useState(null); // State to track the active dropdown
 
   const handleAllService = () => {
     navigate("/");
@@ -31,7 +34,17 @@ const Header = () => {
     console.log("Multiple boxes modal clicked"); // Debugging line
     setShowMultipleBoxesModal(!showMultipleBoxesModal);
   };
-
+  const handleNavigation = (path) => {
+    navigate(path);
+    setShowSidebar(false); // Close sidebar on navigation
+  };
+  const toggleDropdown = (dropdown) => {
+    if (activeDropdown === dropdown) {
+      setActiveDropdown(null); // Close dropdown if it's already active
+    } else {
+      setActiveDropdown(dropdown); // Open the clicked dropdown
+    }
+  };
   return (
     <div>
       <div className="banner">
@@ -63,7 +76,252 @@ const Header = () => {
         <div className="container-default-2">
           <div className="header-content-wrapper"></div>
           <div className="header-middle">
-            <nav className="header-nav-menu-wrapper">
+            {showSidebar && (
+              <nav className="bigger-1">
+                <ul className="sidebar123">
+                  <li onClick={() => setShowSidebar(false)}>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="26"
+                        viewBox="0 96 960 960"
+                        width="26"
+                      >
+                        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231-231 231Z" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  {/* Instagram Dropdown */}
+                  <li className="header-nav-list-item2">
+                    Instagram{" "}
+                    <span className="dropdown-arrow2">expand_more</span>
+                    <div className="dropdown-menu2">
+                      <div className="dropdown-grid2">
+                        <div className="grid-section2">
+                          <h3>Instagram1</h3>
+
+                          <a
+                            href="/followerinstagram"
+                            className="dropdown-item2"
+                          >
+                            <span className="spanokok">
+                              <img
+                                src={instagram}
+                                alt="Instagram Followers"
+                                className="dropdown-image2"
+                              />
+
+                              <p>Instagram Followers</p>
+                            </span>
+                          </a>
+
+                          <a href="/likesinsta" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={instagram}
+                                alt="Instagram Likes"
+                                className="dropdown-image2"
+                              />
+                              <p>Instagram Likes</p>
+                            </span>
+                          </a>
+                        </div>
+                        <div className="grid-section2">
+                          <h3>Instagram2</h3>
+
+                          <a href="/commentsinsta" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={instagram}
+                                alt="Instagram Comments"
+                                className="dropdown-image2"
+                              />
+                              <p>Instagram Comments</p>
+                            </span>
+                          </a>
+                          <a href="/Viewsinsta" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={instagram}
+                                alt="Instagram Views"
+                                className="dropdown-image2"
+                              />
+                              <p>Instagram Views</p>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  {/* Twitter Dropdown */}
+                  <li className="header-nav-list-item2">
+                    Twitter <span className="dropdown-arrow2">expand_more</span>
+                    <div className="dropdown-menu2">
+                      <div className="dropdown-grid2">
+                        <div className="grid-section2">
+                          <h3>Twitter1</h3>
+
+                          <a href="/followertwitter" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitter}
+                                alt="Twitter Followers"
+                                className="dropdown-image2"
+                              />
+                              <p>Twitter Followers</p>
+                            </span>
+                          </a>
+                          <a href="/liketwitter" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitter}
+                                alt="Twitter Likes"
+                                className="dropdown-image2"
+                              />
+                              <p>Twitter Likes</p>
+                            </span>
+                          </a>
+                        </div>
+                        <div className="grid-section2">
+                          <h3>Twitter2</h3>
+
+                          <a href="/Commentstwitter" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitter}
+                                alt="Twitter Comments"
+                                className="dropdown-image2"
+                              />
+                              <p>Twitter Comments</p>
+                            </span>
+                          </a>
+                          <a href="/viewstwitter" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitter}
+                                alt="Twitter Views"
+                                className="dropdown-image"
+                              />
+                              <p>Twitter Views</p>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  {/* TikTok Dropdown */}
+                  <li className="header-nav-list-item2">
+                    Tiktok <span className="dropdown-arrow2">expand_more</span>
+                    <div className="dropdown-menu2">
+                      <div className="dropdown-grid2">
+                        <div className="grid-section2">
+                          <h3>Tiktok1</h3>
+
+                          <a href="/followertiktok" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={tiktok}
+                                alt="Tiktok Followers"
+                                className="dropdown-image2"
+                              />
+                              <p>Tiktok Followers</p>
+                            </span>
+                          </a>
+                          <a href="/liketiktok" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={tiktok}
+                                alt="Tiktok Likes"
+                                className="dropdown-image2"
+                              />
+                              <p>Tiktok Likes</p>
+                            </span>
+                          </a>
+                        </div>
+                        <div className="grid-section2">
+                          <h3>Tiktok2</h3>
+
+                          <a href="/commentstiktok" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={tiktok}
+                                alt="Tiktok Comments"
+                                className="dropdown-image2"
+                              />
+                              <p>Tiktok Comments</p>
+                            </span>
+                          </a>
+                          <a href="/viewtiktok" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={tiktok}
+                                alt="Tiktok Views"
+                                className="dropdown-image2"
+                              />
+                              <p>Tiktok Views</p>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  {/* Twitch Dropdown */}
+                  <li className="header-nav-list-item2">
+                    Twitch <span className="dropdown-arrow2">expand_more</span>
+                    <div className="dropdown-menu2">
+                      <div className="dropdown-grid2">
+                        <div className="grid-section2">
+                          <h3>Twitch1</h3>
+
+                          <a href="/followertwitch" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitch}
+                                alt="Twitch Followers"
+                                className="dropdown-image2"
+                              />
+                              <p>Twitch Followers</p>
+                            </span>
+                          </a>
+                          <a href="/viewtwitch" className="dropdown-item2">
+                            <span className="spanokok">
+                              <img
+                                src={twitch}
+                                alt="Twitch Views"
+                                className="dropdown-image2"
+                              />
+                              <p>Twitch Views</p>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/abouttrial"
+                      onClick={() => handleNavigation("/abouttrial")}
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/contactus"
+                      onClick={() => handleNavigation("/contactus")}
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            )}
+
+            <nav className=" header-nav-menu-wrapper">
               <ul className="header-nav-menu-list">
                 <img
                   src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
@@ -71,10 +329,10 @@ const Header = () => {
                   onClick={handleAllService}
                   alt="Socialplug Logo"
                 />
-                <li className="header-nav-list-item">
+                <li className="hideOnMobile header-nav-list-item">
                   Instagram <span className="dropdown-arrow">expand_more</span>
                   <div className="dropdown-menu">
-                    <div className="dropdown-grid">
+                    <div className="dropdown-grid2">
                       <div className="grid-section">
                         <h3>Instagram1</h3>
                         <a href="/followerinstagram" className="dropdown-item">
@@ -116,7 +374,7 @@ const Header = () => {
                     </div>
                   </div>
                 </li>
-                <li className="header-nav-list-item">
+                <li className="hideOnMobile header-nav-list-item">
                   Twitter <span className="dropdown-arrow">expand_more</span>
                   <div className="dropdown-menu">
                     <div className="dropdown-grid">
@@ -161,7 +419,7 @@ const Header = () => {
                     </div>
                   </div>
                 </li>
-                <li className="header-nav-list-item">
+                <li className="hideOnMobile header-nav-list-item">
                   Tiktok <span className="dropdown-arrow">expand_more</span>
                   <div className="dropdown-menu">
                     <div className="dropdown-grid">
@@ -206,13 +464,13 @@ const Header = () => {
                     </div>
                   </div>
                 </li>
-                <li className="header-nav-list-item">
+                <li className="hideOnMobile header-nav-list-item">
                   Twitch <span className="dropdown-arrow">expand_more</span>
                   <div className="dropdown-menu">
                     <div className="dropdown-grid">
                       <div className="grid-section">
                         <h3>Twitch1</h3>
-                        <a href="#" className="dropdown-item">
+                        <a href="/followertwitch" className="dropdown-item">
                           <img
                             src={twitch}
                             alt="Twitch Followers"
@@ -220,7 +478,7 @@ const Header = () => {
                           />
                           <p>Twitch Followers</p>
                         </a>
-                        <a href="#" className="dropdown-item">
+                        <a href="/viewtwitch" className="dropdown-item">
                           <img
                             src={twitch}
                             alt="Twitch Views"
@@ -231,6 +489,21 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
+                </li>
+                <li
+                  className="menu-button"
+                  onClick={() => setShowSidebar(true)}
+                >
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="26"
+                      viewBox="0 96 960 960"
+                      width="26"
+                    >
+                      <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg>
+                  </a>
                 </li>
                 <button className="all-services" onClick={handleAllService}>
                   All Services
