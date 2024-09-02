@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../Styles/ordersummary.css";
-import { useNavigate } from "react-router-dom";
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import bitcoin from "../Images/bitcoin.png";
 import tether from "../Images/tether-usdt-logo.png";
 import etherium from "../Images/ethereum-eth-logo.png";
@@ -14,14 +14,61 @@ import paypal from "../Images/paypal-logo-2.png";
 
 function Ordersummary() {
   const location = useLocation();
-  const { cartItems, totalAmount } = location.state || {}; // Fetch cart data from location state
+  const { cartItems = [], totalAmount = 0 } = location.state || {};
 
-  const [selectedMethod, setSelectedMethod] = React.useState("");
+  const [selectedMethod, setSelectedMethod] = useState("");
+
+  const [formData, setFormData] = useState({
+    orderla_firstname: "",
+    orderla_lastname: "",
+    orderla_email: "",
+    orderla_paymentoption: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleMethodChange = (method) => {
     setSelectedMethod(method);
   };
-  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Prepare the orderData object
+    const orderData = {
+      orderla_firstname: formData.orderla_firstname,
+      orderla_lastname: formData.orderla_lastname,
+      orderla_email: formData.orderla_email,
+      orderla_paymentoption: formData.orderla_paymentoption || selectedMethod,
+      orderla_totaltopay: totalAmount.toFixed(2),
+      orderla_servicename1: cartItems[0]?.service || "",
+      orderla_quantity1: cartItems[0]?.quantity || 0,
+      orderla_servicename2: cartItems[1]?.service || "", // Ensure this is set or handle appropriately
+      orderla_quantity2: cartItems[1]?.quantity || 0, // Ensure this is set or handle appropriately
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/orderlawa/add",
+        orderData
+      );
+      if (response.status === 200) {
+        toast.success("Order submitted successfully!");
+        // Optionally, navigate to a success page
+        // navigate("/success");
+      } else {
+        toast.error("Order submission failed.");
+      }
+    } catch (error) {
+      console.error("Error submitting order:", error);
+      toast.error("Error submitting order: " + error.message);
+    }
+  };
   return (
     <div className="order12-upvote-downvote-info">
       <div className="lefto">
@@ -104,59 +151,59 @@ function Ordersummary() {
             </a>
           </p>
           {/* <div
-              class="order12-form-group order12-form-group-lg"
-              data-field="219"
-            >
-              <label for="email" class="order12-form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="order12-form-control"
-                placeholder=""
-                value=""
-                autocomplete="email"
-                required
-              />
-              <div class="order12-help-block">
-                Already have an account?{" "}
-                <a
-                  href="https://panel.socialplug.io/login"
-                  class="order12-help-link"
-                >
-                  Sign in here
-                </a>
-                .
-              </div>
-            </div> */}
+                class="order12-form-group order12-form-group-lg"
+                data-field="219"
+              >
+                <label for="email" class="order12-form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="order12-form-control"
+                  placeholder=""
+                  value=""
+                  autocomplete="email"
+                  required
+                />
+                <div class="order12-help-block">
+                  Already have an account?{" "}
+                  <a
+                    href="https://panel.socialplug.io/login"
+                    class="order12-help-link"
+                  >
+                    Sign in here
+                  </a>
+                  .
+                </div>
+              </div> */}
         </div>
       </div>
       <div className="rightooo">
-        <div class="sticky-order123">
-          <div class="invoice-items-order123" id="preview">
-            <h2 class="mb-4-order123">Order Summary</h2>
-            <div class="p-3 flex flex-column gap-2 rounded">
+        <div className="sticky-order123">
+          <div className="invoice-items-order123" id="preview">
+            <h2 className="mb-4-order123">Order Summary</h2>
+            <div className="p-3 flex flex-column gap-2 rounded">
               {cartItems && cartItems.length > 0 ? (
                 cartItems.map((item, index) => (
                   <div
                     key={index}
                     className="flex flex-row justify-between w-full"
                   >
+                    <div>Service {index + 1}:</div>
                     <div>
-                      <div className="text-500">Service</div>
+                      <strong>{item.service}</strong>
                     </div>
-                    <div>{item.service}</div>
+                    <div>Quantity {index + 1}:</div>
+                    <div>
+                      <strong>{item.quantity}</strong>
+                    </div>
                   </div>
                 ))
               ) : (
                 <p>No items in the cart.</p>
               )}
-              <div className="flex flex-row justify-between w-full">
-                <div className="text-500">Quantity</div>
-                <div>{cartItems.reduce((acc, item) => item.quantity, 0)}</div>
-              </div>
               <div className="flex flex-row justify-between w-full">
                 <span className="text-500">Total</span>
                 <div className="text-right-order123">
@@ -282,86 +329,93 @@ function Ordersummary() {
                   <div className="payment-details-order123">
                     <div className="payment-form-order123">
                       <label>First Name</label>
-                      <input type="text" name="firstName" />
+                      <input
+                        type="text"
+                        name="orderla_firstname" // Match with formData key
+                        value={formData.orderla_firstname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Last Name</label>
-                      <input type="text" name="lastName" />
+                      <input
+                        type="text"
+                        name="orderla_lastname" // Match with formData key
+                        value={formData.orderla_lastname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Email</label>
-                      <input type="email" name="email" />
+                      <input
+                        type="email"
+                        name="orderla_email" // Match with formData key
+                        value={formData.orderla_email} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                     </div>
                   </div>
                 )}
-              </div>
-              <div
-                className={`payment-box-order123 ${
-                  selectedMethod === "creditVisa" ? "selected-order123" : ""
-                }`}
-                onClick={() => handleMethodChange("creditVisa")}
-              >
-                <div className="box-content-order123">
-                  <div className="box-title-order123">Credit/Visa</div>
-                  <div className="box-image-order123">
-                    <div className="visaaa">
-                      <img src={visa} alt="" />
-                    </div>
-                  </div>
-                  <div
-                    className={`circle-order123 ${
-                      selectedMethod === "creditVisa"
-                        ? "selected-circle-order123"
-                        : ""
-                    }`}
-                  ></div>
-                </div>
+
                 {selectedMethod === "creditVisa" && (
                   <div className="payment-details-order123">
                     <div className="payment-form-order123">
                       <label>First Name</label>
-                      <input type="text" name="firstName" />
+                      <input
+                        type="text"
+                        name="orderla_firstname" // Match with formData key
+                        value={formData.orderla_firstname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Last Name</label>
-                      <input type="text" name="lastName" />
+                      <input
+                        type="text"
+                        name="orderla_lastname" // Match with formData key
+                        value={formData.orderla_lastname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Email</label>
-                      <input type="email" name="email" />
+                      <input
+                        type="email"
+                        name="orderla_email" // Match with formData key
+                        value={formData.orderla_email} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                     </div>
                   </div>
                 )}
-              </div>
-              <div
-                className={`payment-box-order123 ${
-                  selectedMethod === "PayPal" ? "selected-order123" : ""
-                }`}
-                onClick={() => handleMethodChange("PayPal")}
-              >
-                <div className="box-content-order123">
-                  <div className="box-title-order123">Paypal</div>
-                  <div className="box-image-order123">
-                    <div className="paypal">
-                      <img src={paypal} alt="" />
-                    </div>
-                  </div>
-                  <div
-                    className={`circle-order123 ${
-                      selectedMethod === "PayPal"
-                        ? "selected-circle-order123"
-                        : ""
-                    }`}
-                  ></div>
-                </div>
+
                 {selectedMethod === "PayPal" && (
                   <div className="payment-details-order123">
                     <div className="payment-form-order123">
                       <label>First Name</label>
-                      <input type="text" name="firstName" />
+                      <input
+                        type="text"
+                        name="orderla_firstname" // Match with formData key
+                        value={formData.orderla_firstname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Last Name</label>
-                      <input type="text" name="lastName" />
+                      <input
+                        type="text"
+                        name="orderla_lastname" // Match with formData key
+                        value={formData.orderla_lastname} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                       <label>Email</label>
-                      <input type="email" name="email" />
+                      <input
+                        type="email"
+                        name="orderla_email" // Match with formData key
+                        value={formData.orderla_email} // Bind to the correct state
+                        onChange={handleInputChange}
+                      />
                     </div>
                   </div>
                 )}
               </div>
             </div>
+            <button onClick={handleSubmit} className="submit-order-button">
+              Submit Order
+            </button>
           </div>
         </div>
+        <ToastContainer/>
       </div>
     </div>
   );

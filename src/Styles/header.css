@@ -262,7 +262,7 @@
   justify-content: flex-start;
 }
 .menu-button {
-  display: block;
+  display: none;
 }
 
 .sidebar123 li {

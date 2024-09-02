@@ -188,6 +188,24 @@ order12-form-control {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.submit-order-button {
+  background-color: #00c573;
+  border-radius: 9px;
+  margin-left: 24px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  padding: 18px 24px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+.submit-order-button:hover {
+  background-color: #0d884f;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
 
 @keyframes slideDown-order123 {
   from {
@@ -212,4 +230,114 @@ order12-form-control {
 .paypal img {
   width: 60px;
   height: 20px;
+}
+@media (max-width: 600px) {
+  .order12-upvote-downvote-info {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .lefto,
+  .rightooo {
+    flex: none;
+    width: 100%;
+  }
+
+  .invoice-items-order123 {
+    padding: 10px;
+  }
+
+  .intro h2.order12-section-title,
+  .intro p.order12-info-text,
+  .intro ul.order12-info-list {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .intro ul.order12-info-list li.order12-info-item {
+    margin-bottom: 10px;
+  }
+
+  .order12-help-text {
+    font-size: 14px;
+  }
+
+  .order12-help-link {
+    font-size: 14px;
+  }
+
+  .pictua {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .mb-4-order123 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .text-500 {
+    font-size: 14px;
+  }
+
+  .text-right-order123 h2 {
+    font-size: 20px;
+  }
+
+  .whats-included-item-title-order123 {
+    font-size: 14px;
+  }
+
+  .whats-included-item-description-order123 {
+    font-size: 12px;
+  }
+
+  .whats-included-item-order123 {
+    margin-bottom: 10px;
+  }
+
+  .order12-form-group {
+    font-size: 14px;
+  }
+
+  .order12-form-label {
+    font-size: 14px;
+  }
+
+  .order12-form-control {
+    font-size: 14px;
+  }
+
+  .order12-help-block {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .custom-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .lefto {
+    display: none;
+  }
+  .p-3 {
+    position: relative;
+    left: -290px;
+    max-width: 300px;
+  }
+  .whats-included-items-wrapper-order123 {
+    margin-left: -30px;
+  }
+  .payment-box-order123 {
+    width: 300px;
+  }
+  .submit-order-button {
+    margin-left: -30px;
+    margin-top: 30px;
+  }
 }

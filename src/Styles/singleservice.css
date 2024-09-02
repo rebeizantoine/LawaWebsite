@@ -282,6 +282,10 @@
   cursor: pointer;
   transform: scale(0.9);
 }
+.button-pricing-instagram:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
 .img-payment-icons-card-instagram {
   height: 24px;
   margin: 24px auto 0;

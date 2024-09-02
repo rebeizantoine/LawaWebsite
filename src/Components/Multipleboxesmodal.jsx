@@ -80,12 +80,12 @@ const MultipleBoxesModal = ({ onClose }) => {
       return "TikTok Followers";
     } else if (
       location.pathname.includes("tiktok") &&
-      location.pathname.includes("Comment")
+      location.pathname.includes("comment")
     ) {
       return "TikTok Comments";
     } else if (
       location.pathname.includes("tiktok") &&
-      location.pathname.includes("View")
+      location.pathname.includes("view")
     ) {
       return "TikTok Views";
     } else if (
@@ -189,7 +189,9 @@ const MultipleBoxesModal = ({ onClose }) => {
         price: calculatePrice(), // Calculate the price based on the selected value and service
       };
       addToCart(orderData);
-      toast.success("Package added to cart!");
+      toast.success("Package added to cart!", {
+        onClose: () => onClose(), // Close the modal after the toast is shown
+      });
     } else {
       console.log("Please select an option");
     }

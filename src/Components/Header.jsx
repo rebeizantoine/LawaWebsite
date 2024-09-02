@@ -14,6 +14,7 @@ const Header = () => {
   const navigate = useNavigate();
   const { cartItems, addToCart } = useCart(); // Use context for cartItems
   const [showSidebar, setShowSidebar] = useState(false); // State for sidebar visibility
+  const [isImageOne, setIsImageOne] = useState(true);
 
   const [showCartPopup, setShowCartPopup] = React.useState(false);
   const [showMultipleBoxesModal, setShowMultipleBoxesModal] =
@@ -44,6 +45,9 @@ const Header = () => {
     } else {
       setActiveDropdown(dropdown); // Open the clicked dropdown
     }
+  };
+  const toggleImage = () => {
+    setIsImageOne(!isImageOne); // Toggle between the two images
   };
   return (
     <div>
@@ -301,7 +305,7 @@ const Header = () => {
                     </div>
                   </li>
 
-                  <li>
+                  <li className="header-nav-list-item2">
                     <a
                       href="/abouttrial"
                       onClick={() => handleNavigation("/abouttrial")}
@@ -309,7 +313,7 @@ const Header = () => {
                       About Us
                     </a>
                   </li>
-                  <li>
+                  <li className="header-nav-list-item2">
                     <a
                       href="/contactus"
                       onClick={() => handleNavigation("/contactus")}
@@ -490,19 +494,27 @@ const Header = () => {
                     </div>
                   </div>
                 </li>
-                <li
-                  className="menu-button"
-                  onClick={() => setShowSidebar(true)}
-                >
+                <li className="menu-button" onClick={toggleImage}>
                   <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="26"
-                      viewBox="0 96 960 960"
-                      width="26"
-                    >
-                      <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-                    </svg>
+                    {isImageOne ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="26"
+                        viewBox="0 96 960 960"
+                        width="26"
+                      >
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="26"
+                        viewBox="0 96 960 960"
+                        width="26"
+                      >
+                        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231-231 231Z" />
+                      </svg>
+                    )}
                   </a>
                 </li>
                 <button className="all-services" onClick={handleAllService}>

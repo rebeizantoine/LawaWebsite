@@ -7,6 +7,7 @@ import "../Styles/cartpopup.css"; // Ensure your styles are correctly imported
 
 const CartPopup = ({ items, onClose }) => {
   const { clearCart } = useCart();
+  const navigate = useNavigate(); // Use navigate hook
 
   // Function to render item details safely
   const renderItemDetail = (detail) => {
@@ -20,7 +21,6 @@ const CartPopup = ({ items, onClose }) => {
     }
     return detail;
   };
-  const navigate = useNavigate(); // Use navigate hook
 
   // Function to clear the cart and show a toast notification
   const handleEmptyCart = () => {
@@ -42,7 +42,13 @@ const CartPopup = ({ items, onClose }) => {
   const totalAmountFormatted = isNaN(totalAmount)
     ? "0.00"
     : totalAmount.toFixed(2);
+
+  // Function to handle order summary and navigate to order page
   const handleOrderSummary = () => {
+    if (items.length > 2) {
+      toast.error("You can only have a maximum of 2 items in the cart.");
+      return;
+    }
     navigate("/order", { state: { cartItems: items, totalAmount } });
   };
 
@@ -59,7 +65,7 @@ const CartPopup = ({ items, onClose }) => {
           items.map((item, index) => (
             <div key={index} className="cart-item">
               <p>Service: {renderItemDetail(item.service)}</p>
-              <p>Quantity:{renderItemDetail(item.quantity)} </p>
+              <p>Quantity: {renderItemDetail(item.quantity)} </p>
               <p>Price: {renderItemDetail(item.price)}$</p>
             </div>
           ))
@@ -177,7 +183,7 @@ const CartPopup = ({ items, onClose }) => {
             </span>
           </div>
           <span className="text1">Total</span>
-          <span className="text2">{totalAmount.toFixed(2)}$</span>
+          <span className="text2">{totalAmountFormatted}$</span>
         </button>
         <ToastContainer />
       </div>
