@@ -66,7 +66,7 @@ function Ordersummary() {
     try {
       console.log("Attempting to submit order...");
       const response = await axios.post(
-        "http://localhost:8000/orderlawa/add",
+        "https://lawawebsitebackend.onrender.com/orderlawa/add",
         orderData
       );
       console.log("Response received:", response);

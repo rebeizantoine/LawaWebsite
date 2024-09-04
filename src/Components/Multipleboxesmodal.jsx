@@ -60,7 +60,7 @@ const MultipleBoxesModal = ({ onClose }) => {
       return "Instagram Followers";
     } else if (
       location.pathname.includes("insta") &&
-      location.pathname.includes("Comment")
+      location.pathname.includes("comment")
     ) {
       return "Instagram Comments";
     } else if (
