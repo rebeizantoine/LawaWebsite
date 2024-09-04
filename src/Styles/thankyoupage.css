@@ -1,0 +1,101 @@
+/* General Layout */
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative;
+  top: 50px;
+  margin-bottom: 200px;
+}
+
+.thank-you-message {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00c573;
+}
+
+.thank-you-details {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Button Styles */
+.button123 {
+  background-color: #00c573;
+  border-radius: 0.25rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  padding: 20px 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+
+  position: relative;
+  top: 100px;
+}
+
+.button:hover {
+  background-color: #0d884f;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* Image Styles */
+.thank-you-image {
+  max-height: 150px;
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 20px;
+}
+.porshe {
+  margin-top: -50px;
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .thank-you-container {
+    padding: 1rem;
+  }
+
+  .thank-you-message {
+    font-size: 20px;
+  }
+
+  .thank-you-details {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .thank-you-image {
+    max-height: 100px;
+  }
+}
+
+@media (min-width: 1450px) and (max-width: 1650px) {
+  .thank-you-container {
+    max-width: 1200px;
+  }
+
+  .thank-you-message {
+    font-size: 26px;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}

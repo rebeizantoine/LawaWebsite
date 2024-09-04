@@ -206,6 +206,13 @@ order12-form-control {
   transform: translateY(-5px);
   cursor: pointer;
 }
+.addicom {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
 @keyframes slideDown-order123 {
   from {

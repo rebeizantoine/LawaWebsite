@@ -51,6 +51,9 @@ import Howtoordertwitchview from "./Components/Howtoordertwitchview";
 import Frequentlytwitchview from "./Components/Frequentlytwitchview";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import OrderDash from "./Components/Dashboard/Orderdash";
+import Thankyoupage from "./Components/Thankyoupage";
+import AdminLogin from "./Components/Dashboard/Dashboardlogin";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
@@ -186,6 +189,16 @@ function App() {
               }
             />
             <Route
+              path="/thankyoupage"
+              element={
+                <>
+                  <Header />
+                  <Thankyoupage />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
               path="/packmodal2"
               element={
                 <>
@@ -308,10 +321,14 @@ function App() {
             />
             <Route
               path="/dashboard"
+              element={<ProtectedRoute component={Dashboard} />}
+            />
+            <Route
+              path="/loginadmin"
               element={
                 <>
-                  {/* <Header /> */}
-                  <Dashboard />
+                  <Header />
+                  <AdminLogin />
                   <Footer />
                 </>
               }

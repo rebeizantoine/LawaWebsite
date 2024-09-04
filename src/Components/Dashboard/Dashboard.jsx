@@ -1,9 +1,75 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./dashboard.css"; // Make sure to create and import a CSS file for styling
 
 const Dashboard = () => {
+  const [orders, setOrders] = useState([]);
+  const [currentOrder, setCurrentOrder] = useState({});
+  const [sortOption, setSortOption] = useState("latest");
+
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+  const navigate = useNavigate();
+
+  const fetchOrders = () => {
+    axios
+      .get("http://localhost:8000/orderLawa/")
+      .then((response) => {
+        setOrders(response.data);
+        toast.success("Orders fetched successfully!");
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the orders!", error);
+        toast.error("Failed to fetch orders.");
+      });
+  };
+
+  const handleSortChange = (event) => {
+    setSortOption(event.target.value);
+  };
+
+  const sortedOrders = [...orders].sort((a, b) => {
+    if (sortOption === "latest") {
+      // Convert the date strings to Date objects and sort in descending order
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    } else if (sortOption === "highest") {
+      // Convert total to a number for proper sorting and sort in descending order
+      return (
+        parseFloat(b.orderla_totaltopay) - parseFloat(a.orderla_totaltopay)
+      );
+    }
+    return 0;
+  });
+  const handleLogout = () => {
+    // Clear storage
+    localStorage.clear();
+    sessionStorage.clear();
+
+    // Redirect to login page
+    navigate("/");
+  };
+  const formatDate = (dateString) => {
+    const options = {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    };
+    return new Intl.DateTimeFormat("en-GB", options).format(
+      new Date(dateString)
+    );
+  };
   return (
     <div className="dashboard">
+      <ToastContainer />
+
       <div className="sidebar">
         <div className="sidebar-header">
           <div className="app-icon">
@@ -132,7 +198,7 @@ const Dashboard = () => {
               <input
                 className="search-input"
                 type="text"
-                placeholder="Search"
+                placeholder="Search disabled"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -191,14 +257,10 @@ const Dashboard = () => {
               </svg>
             </button>
             <button className="profile-btn">
-              <img
-                src="https://assets.codepen.io/3306515/IMG_2025.jpg"
-                alt=""
-              />
-              <span>Dominic</span>
+              <span>Ray Lawandos</span>
             </button>
           </div>
-          <button className="messages-btn">
+          <button className="messages-btn" onClick={handleLogout}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -209,13 +271,60 @@ const Dashboard = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="feather feather-message-circle"
+              className="feather feather-log-out"
             >
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"></path>
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
           </button>
         </div>
-        <div className="app-content"></div>
+        <div className="app-content">
+          <div className="filter-container">
+            <div className="select">
+              <select
+                value={sortOption}
+                onChange={handleSortChange}
+                className="options"
+              >
+                <option value="latest">Latest Order</option>
+                <option value="highest">Highest Price</option>
+              </select>
+              <div className="custom-arrow"></div>
+            </div>
+          </div>
+          <table className="orders-table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Order</th>
+                <th>Total</th>
+                <th>Payment Option</th>
+                <th>Additional Comment</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedOrders.map((order, index) => (
+                <tr key={index}>
+                  <td>{order.orderla_firstname}</td>
+                  <td>{order.orderla_lastname}</td>
+                  <td>{order.orderla_email}</td>
+                  <td>
+                    {order.orderla_servicename1} + {order.orderla_quantity1} +{" "}
+                    {order.orderla_servicename2} + {order.orderla_quantity2}
+                  </td>
+                  <td>{order.orderla_totaltopay}$</td>
+                  <td>{order.orderla_paymentoption}</td>
+                  <td>{order.orderla_additionalcomment}</td>
+                  <td>{formatDate(order.createdAt)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

@@ -11,10 +11,12 @@ import solana from "../Images/solana-sol-logo.png";
 import bnb from "../Images/bnb-bnb-logo.png";
 import visa from "../Images/visa_PNG391.png";
 import paypal from "../Images/paypal-logo-2.png";
+import { useCart } from "./Cartcontext"; // Import the useCart hook
 
 function Ordersummary() {
   const location = useLocation();
   const { cartItems = [], totalAmount = 0 } = location.state || {};
+  const { clearCart } = useCart();
 
   const [selectedMethod, setSelectedMethod] = useState("");
 
@@ -23,7 +25,12 @@ function Ordersummary() {
     orderla_lastname: "",
     orderla_email: "",
     orderla_paymentoption: "",
+    orderla_additionalcomment: "",
   });
+  const handleEmptyCart = () => {
+    clearCart();
+    toast.success("Cart has been emptied!"); // Show toast notification
+  };
 
   const navigate = useNavigate();
 
@@ -39,7 +46,7 @@ function Ordersummary() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare the orderData object
+    // Prepare the orderData object with conditional fields
     const orderData = {
       orderla_firstname: formData.orderla_firstname,
       orderla_lastname: formData.orderla_lastname,
@@ -48,19 +55,30 @@ function Ordersummary() {
       orderla_totaltopay: totalAmount.toFixed(2),
       orderla_servicename1: cartItems[0]?.service || "",
       orderla_quantity1: cartItems[0]?.quantity || 0,
-      orderla_servicename2: cartItems[1]?.service || "", // Ensure this is set or handle appropriately
-      orderla_quantity2: cartItems[1]?.quantity || 0, // Ensure this is set or handle appropriately
+      // Include these fields only if there are at least 2 items in the cart
+      ...(cartItems.length > 1 && {
+        orderla_servicename2: cartItems[1]?.service || "",
+        orderla_quantity2: cartItems[1]?.quantity || 0,
+      }),
+      orderla_additionalcomment: formData.orderla_additionalcomment || "",
     };
 
     try {
+      console.log("Attempting to submit order...");
       const response = await axios.post(
         "http://localhost:8000/orderlawa/add",
         orderData
       );
-      if (response.status === 200) {
+      console.log("Response received:", response);
+
+      if (response.status === 201) {
         toast.success("Order submitted successfully!");
-        // Optionally, navigate to a success page
-        // navigate("/success");
+        setTimeout(() => {
+          console.log("Clearing cart...");
+          handleEmptyCart();
+          // Optionally, navigate to a success page
+          // navigate("/success");
+        }, 1000); // Adjust the delay as needed
       } else {
         toast.error("Order submission failed.");
       }
@@ -72,6 +90,7 @@ function Ordersummary() {
   return (
     <div className="order12-upvote-downvote-info">
       <div className="lefto">
+        <ToastContainer />
         <img
           src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
           alt=""
@@ -349,6 +368,14 @@ function Ordersummary() {
                         value={formData.orderla_email} // Bind to the correct state
                         onChange={handleInputChange}
                       />
+
+                      <label>Additional Comment/request</label>
+                      <textarea
+                        name="orderla_additionalcomment"
+                        className="addicom" // Match with formData key
+                        value={formData.orderla_additionalcomment} // Bind to the correct state
+                        onChange={handleInputChange} // Update formData when the textarea changes
+                      />
                     </div>
                   </div>
                 )}
@@ -415,7 +442,6 @@ function Ordersummary() {
             </button>
           </div>
         </div>
-        <ToastContainer/>
       </div>
     </div>
   );

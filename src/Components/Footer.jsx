@@ -18,17 +18,15 @@ const Footer = () => {
             />
           </a>
           <div className="p-footer">
-            Socialplug is the industry-leading social media shop offering a
-            variety of services across social media platforms.
+            JUST ANOTHER SMM is a top-tier social media shop offering a wide
+            range of services across various social media platforms.
           </div>
         </div>
 
         <div className="footer-block">
           <div className="footer-title">Company</div>
           <div className="p-footer">
-            CB SOLUTIONS OÜ (16474680)
-            <br />
-            Hobujaama 4, Tallinn, Estonia, 10111
+            JUST ANOTHER SMM Beirut, Lebanon Open 24/7 Mon - Sun
           </div>
           <div className="p-footer p-footer-margin-bottom">
             Open 24/7 Mon - Sun
@@ -44,19 +42,19 @@ const Footer = () => {
             href="/services/buy-twitter-followers"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy Twitter (X) Followers
+            Buy Instagram Followers
           </a>
           <a
             href="/services/buy-instagram-followers"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy Instagram Followers
+            Buy Instagram Views
           </a>
           <a
             href="/services/buy-reddit-upvotes"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy Reddit Upvotes
+            Buy Instagram Likes
           </a>
           <a
             href="/services/buy-twitter-likes"
@@ -68,19 +66,25 @@ const Footer = () => {
             href="/services/buy-linkedin-followers"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy LinkedIn Followers
+            Buy Twitter Followers
           </a>
           <a
             href="/services/buy-spotify-plays"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy Spotify Streams
+            Buy Twitter Views
           </a>
           <a
             href="/services/buy-youtube-subscribers"
             className="paragraph-basic _40-bottom-padding"
           >
-            Buy Youtube Subscribers
+            Buy Twitch Followers
+          </a>
+          <a
+            href="/services/buy-youtube-subscribers"
+            className="paragraph-basic _40-bottom-padding"
+          >
+            Buy Twitch Viewers
           </a>
         </div>
 
@@ -92,13 +96,13 @@ const Footer = () => {
           >
             Contact Us
           </a>
-          <a
+          {/* <a
             href="/affiliate-program"
             className="paragraph-basic _40-bottom-padding"
           >
             Affiliate Program
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="/free-tools/instagram-username-checker"
             className="paragraph-basic _40-bottom-padding"
           >
@@ -111,13 +115,13 @@ const Footer = () => {
           >
             Twitter Username Checker{" "}
             <span className="menu-item-notif">FREE</span>
-          </a>
-          <a href="/blog" className="paragraph-basic _40-bottom-padding">
+          </a> */}
+          {/* <a href="/blog" className="paragraph-basic _40-bottom-padding">
             Blog
           </a>
           <a href="/about-us" className="paragraph-basic _40-bottom-padding">
             About Us
-          </a>
+          </a> */}
           <a
             href="/terms-of-services-privacy-policy"
             className="paragraph-basic _40-bottom-padding"
@@ -160,8 +164,6 @@ const Footer = () => {
               />
             </a>
           </div>
-        
-      
         </div>
       </div>
 

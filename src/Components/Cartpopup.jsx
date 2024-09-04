@@ -26,6 +26,9 @@ const CartPopup = ({ items, onClose }) => {
   const handleEmptyCart = () => {
     clearCart();
     toast.success("Cart has been emptied!"); // Show toast notification
+    setTimeout(() => {
+      onClose();
+    }, 500);
   };
 
   // Function to calculate the total price of items in the cart
@@ -50,6 +53,9 @@ const CartPopup = ({ items, onClose }) => {
       return;
     }
     navigate("/order", { state: { cartItems: items, totalAmount } });
+    setTimeout(() => {
+      onClose();
+    }, 500);
   };
 
   return (

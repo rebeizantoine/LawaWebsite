@@ -31,7 +31,7 @@
 .sidebar-list-item {
   display: flex;
   align-items: center;
-  padding: 15px;    
+  padding: 15px;
   color: #fff;
   text-decoration: none;
 }
@@ -89,4 +89,8 @@ table td {
 table th {
   background-color: #eee;
   font-weight: bold;
+}
+.orders-table {
+  color: #14141b;
+  font-family: "Nunito Sans", sans-serif;
 }

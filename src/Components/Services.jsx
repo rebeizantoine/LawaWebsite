@@ -15,31 +15,23 @@ const Services = () => {
               className="icon-image"
             />
             <div className="feature-header">Twitter NFT Services</div>
-            <a
-              href="/services/nft-twitter-auto-engagement"
-              className="service-link"
-            >
-              Twitter NFT Auto Engagement Packages
-            </a>
-            <a
-              href="/services/buy-nft-twitter-followers"
-              className="service-link"
-            >
+
+            <a href="/followertwitter" className="service-link">
               Twitter NFT Followers
             </a>
-            <a href="/services/nft-twitter-likes" className="service-link">
+            <a href="/liketwitter" className="service-link">
               Twitter NFT Likes
             </a>
-            <a href="/services/nft-twitter-retweets" className="service-link">
-              Twitter NFT Retweets
+            <a href="/Viewstwitter" className="service-link">
+              Twitter NFT Views
             </a>
-            <a href="/services/nft-twitter-comments" className="service-link">
+            <a href="Commentstwitter" className="service-link">
               Twitter NFT Comments
             </a>
           </div>
 
           {/* Discord Services */}
-          <div className="feature-grid-block">
+          {/* <div className="feature-grid-block">
             <img
               src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/62a75d8247013b607d994982_discord-icon.png"
               alt="Discord services icon"
@@ -62,10 +54,10 @@ const Services = () => {
             >
               Discord NFT Reactions
             </a>
-          </div>
+          </div> */}
 
           {/* Twitter Services */}
-          <div className="feature-grid-block">
+          {/* <div className="feature-grid-block">
             <img
               src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/6334701a469c3d1af98a2292_twitter-services-icon.svg"
               alt="Twitter Services Icon"
@@ -90,7 +82,7 @@ const Services = () => {
             <a href="/Commentstwitter" className="service-link">
               Twitter Comments
             </a>
-          </div>
+          </div> */}
 
           {/* Instagram Services */}
           <div className="feature-grid-block">
@@ -100,7 +92,7 @@ const Services = () => {
               className="icon-image"
             />
             <div className="feature-header">Instagram</div>
-            <a href="/followerinstagram" className="service-link">
+            {/* <a href="/followerinstagram" className="service-link">
               Instagram Followers
             </a>
             <a href="/likesinsta" className="service-link">
@@ -115,27 +107,18 @@ const Services = () => {
               className="service-link"
             >
               Instagram Custom / Random Comments
-            </a>
-            <a
-              href="/services/buy-instagram-reels-views"
-              className="service-link"
-            >
+            </a> */}
+            <a href="/followerinstagram" className="service-link">
               Instagram Reel Views
             </a>
-            <a
-              href="/services/buy-instagram-reels-likes"
-              className="service-link"
-            >
+            <a href="/likesinsta" className="service-link">
               Instagram Reel Likes
             </a>
-            <a
-              href="/services/buy-instagram-live-views"
-              className="service-link"
-            >
+            <a href="/Viewsinsta" className="service-link">
               Instagram Live Views
             </a>
-            <a href="/services/buy-instagram-saves" className="service-link">
-              Instagram Saves
+            <a href="/Commentsinsta" className="service-link">
+              Instagram Comments
             </a>
           </div>
 
@@ -169,8 +152,11 @@ const Services = () => {
               className="icon-image"
             />
             <div className="feature-header">Twitch</div>
-            <a href="/services/buy-twitch-viewers" className="service-link">
+            <a href="/viewtwitch" className="service-link">
               Twitch Viewers
+            </a>
+            <a href="/followertwitch" className="service-link">
+              Twitch Followers
             </a>
           </div>
 
