@@ -12,7 +12,7 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/adminlawa/adminlawa/login",
+        "https://lawawebsitebackend.onrender.com/adminlawa/login",
         {
           adminname,
           adminpassword,
