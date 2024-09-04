@@ -79,7 +79,7 @@
   grid-auto-columns: 1fr;
   display: grid;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 600px) {
   .grid-all-services {
     grid-column-gap: 60px;
     grid-row-gap: 60px;
@@ -106,5 +106,9 @@
     color: #14114b;
     text-align: left;
     font-family: "Nunito Sans", sans-serif;
+  }
+  body {
+    padding-top: 0px !important;
+    padding-left: 0px !important;
   }
 }

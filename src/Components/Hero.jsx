@@ -2,6 +2,14 @@ import React from "react";
 import "../Styles/hero.css";
 
 const Hero = () => {
+  const handleScrollToServices = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    const servicesElement = document.getElementById("services");
+    if (servicesElement) {
+      servicesElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <div className="bigger-hero">
@@ -15,7 +23,11 @@ const Hero = () => {
               "We provide social media marketing services & help customers reach
               their marketing goals."
             </p>
-            <a href="" className="button-hero">
+            <a
+              href="#services"
+              className="button-hero"
+              onClick={handleScrollToServices}
+            >
               View All Services
             </a>
             <a href="" className="button-hero-white">

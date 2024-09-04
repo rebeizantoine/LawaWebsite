@@ -46,9 +46,15 @@ const Header = () => {
       setActiveDropdown(dropdown); // Open the clicked dropdown
     }
   };
+  const toggleSidebar = () => {
+    console.log("Sidebar toggle button clicked"); // Debugging line
+    setShowSidebar(!showSidebar);
+  };
   const toggleImage = () => {
     setIsImageOne(!isImageOne); // Toggle between the two images
+    toggleSidebar();
   };
+
   return (
     <div>
       <div className="banner">

@@ -347,6 +347,13 @@ order12-form-control {
     margin-left: -30px;
     margin-top: 30px;
   }
+  .text-right-order123 {
+    position: relative;
+    left: -00px;
+  }
+  .justify-between {
+    width: 300px;
+  }
 }
 @media screen and (min-width: 1450px) and (max-width: 1650px) {
   .p-3 {

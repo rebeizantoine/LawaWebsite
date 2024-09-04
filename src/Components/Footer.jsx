@@ -90,10 +90,7 @@ const Footer = () => {
 
         <div className="footer-block">
           <div className="footer-title">Quick Links</div>
-          <a
-            href="https://panel.socialplug.io/contact/helpdesk"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/contactform" className="paragraph-basic _40-bottom-padding">
             Contact Us
           </a>
           {/* <a
