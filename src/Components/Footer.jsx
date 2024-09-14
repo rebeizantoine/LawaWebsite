@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/footer.css";
+import justlogo from "../Images/jansmmlogo.png";
 
 const Footer = () => {
   return (
@@ -11,11 +12,7 @@ const Footer = () => {
             aria-current="page"
             className="a-footer-logo w-inline-block w--current"
           >
-            <img
-              src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d779e0364d2f5b5d85c_Socialplug-logo-white.svg"
-              alt="SocialPlug logo"
-              className="footer-logo"
-            />
+            <img src={justlogo} alt="SocialPlug logo" className="footer-logo" />
           </a>
           <div className="p-footer">
             JUST ANOTHER SMM is a top-tier social media shop offering a wide
@@ -39,51 +36,33 @@ const Footer = () => {
             All Services
           </a>
           <a
-            href="/services/buy-twitter-followers"
+            href="/followerinstagram"
             className="paragraph-basic _40-bottom-padding"
           >
             Buy Instagram Followers
           </a>
-          <a
-            href="/services/buy-instagram-followers"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/Viewsinsta" className="paragraph-basic _40-bottom-padding">
             Buy Instagram Views
           </a>
-          <a
-            href="/services/buy-reddit-upvotes"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/likesinsta" className="paragraph-basic _40-bottom-padding">
             Buy Instagram Likes
           </a>
-          <a
-            href="/services/buy-twitter-likes"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/liketwitter" className="paragraph-basic _40-bottom-padding">
             Buy Twitter Likes
           </a>
-          <a
-            href="/services/buy-linkedin-followers"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/liketwitter" className="paragraph-basic _40-bottom-padding">
             Buy Twitter Followers
           </a>
-          <a
-            href="/services/buy-spotify-plays"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/viewtwitch" className="paragraph-basic _40-bottom-padding">
             Buy Twitter Views
           </a>
           <a
-            href="/services/buy-youtube-subscribers"
+            href="/followertwitch"
             className="paragraph-basic _40-bottom-padding"
           >
             Buy Twitch Followers
           </a>
-          <a
-            href="/services/buy-youtube-subscribers"
-            className="paragraph-basic _40-bottom-padding"
-          >
+          <a href="/viewtwitch" className="paragraph-basic _40-bottom-padding">
             Buy Twitch Viewers
           </a>
         </div>
@@ -166,7 +145,7 @@ const Footer = () => {
 
       <div className="footer-bottom-bar w-container">
         <div className="container-footer-bottom">
-          <div className="p-footer-bottom">© SocialPlug 2024</div>
+          <div className="p-footer-bottom">© JustAnotherSmm 2024</div>
           <img
             src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/66292d46e99717b0f56ae2a2_payment-icons-24.svg"
             loading="lazy"

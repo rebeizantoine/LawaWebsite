@@ -73,6 +73,10 @@
   transition: all 0.3s;
   display: inline-block;
   text-decoration: none;
+  color: #fff;
+}
+.button-hero:hover{
+  
 }
 .button-hero-white {
   background-color: white;

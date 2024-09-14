@@ -7,7 +7,7 @@ const Whychoose = () => {
       <div className="content-section">
         <div className="content-container">
           <h2 className="h2-center">
-            Why Choose <span className="span-text-17">SocialPlug?</span>
+            Why Choose <span className="span-text-17">JustAnotherSmm?</span>
           </h2>
           <div className="service-grid">
             <a href="" className="grid-block">

@@ -9,7 +9,7 @@ import twitter from "../Images/icons8-twitter-48.png";
 import carto from "../Images/carto.svg";
 import CartPopup from "./Cartpopup";
 import MultipleBoxesModal from "./Multipleboxesmodal"; // Ensure the name matches your file
-
+import justlogo from "../Images/jansmmlogo.png";
 const Header = () => {
   const navigate = useNavigate();
   const { cartItems, addToCart } = useCart(); // Use context for cartItems
@@ -334,7 +334,7 @@ const Header = () => {
             <nav className=" header-nav-menu-wrapper">
               <ul className="header-nav-menu-list">
                 <img
-                  src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
+                  src={justlogo}
                   className="social-logo"
                   onClick={handleAllService}
                   alt="Socialplug Logo"

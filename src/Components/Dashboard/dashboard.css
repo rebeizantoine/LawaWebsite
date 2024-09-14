@@ -216,3 +216,40 @@
 .select option:hover {
   background-color: #323741;
 }
+@media screen and (max-width: 600px) {
+  .dashboard {
+    flex-direction: column;
+    height: auto;
+    top: 60px;
+  }
+
+  /* Sidebar adjustment */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: none !important;
+  }
+
+  /* Content adjustment */
+  .content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  /* Table adjustments */
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+
+  /* Ensure table scrolls horizontally on smaller screens */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
