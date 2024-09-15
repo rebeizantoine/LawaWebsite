@@ -128,7 +128,7 @@ const Commentstwitter = () => {
                 </div>
               </div>
               <button
-                className="button-pricing-instagram w-button"
+                className="button-pricingtwitter w-button"
                 onClick={handleModalOpen}
                 aria-label="Choose a package"
               >

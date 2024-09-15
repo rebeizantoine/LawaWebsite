@@ -301,3 +301,71 @@
   display: inline-block;
   margin-left: 45px;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+  }
+
+  .order-box {
+    width: 100%;
+    max-width: 100%; /* Make sure the order box uses full width */
+    padding: 15px; /* Adjust padding for smaller screens */
+    box-shadow: none; /* Remove shadow for a cleaner look on small screens */
+    border-radius: 8px; /* Slightly smaller border-radius */
+  }
+
+  .order-text {
+    margin-top: 10px; /* Adjust margin to fit the smaller screen */
+    font-size: 16px; /* Adjust font size for better readability */
+    color: #333; /* Ensure the text color is readable */
+  }
+
+  /* Optional: Style for buttons if they are part of the order box */
+  .order-box button {
+    width: 100%; /* Full-width buttons */
+    padding: 12px; /* Adjust padding for better touch accessibility */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: none;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    cursor: pointer;
+    margin-top: 10px; /* Space between buttons */
+  }
+
+  .order-box button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+  }
+  .hero-pricing-containertwitch {
+    position: absolute;
+    left: 80px;
+    width: 300px;
+    top: 430px;
+    background-color: none;
+  }
+  .pricing-header-copytwitch {
+    display: none;
+  }
+  .green-line-pricingtwitch {
+    display: none;
+  }
+  .div-pricingtwitch {
+    display: none;
+  }
+  .div-pricing-bulletstwitch {
+    display: none;
+  }
+  .hero-pricing-containertwitch {
+    background-color: transparent;
+  }
+  .hero-section-servicestwitch {
+    min-height: fit-content !important;
+  }
+}

@@ -305,8 +305,9 @@ twitter {
   margin-left: 45px;
 }
 @media only screen and (max-width: 600px) {
-  .button-pricing {
+  .button-pricingtwitter {
     position: relative;
+    top: -50px;
   }
   body {
     padding: 10px;
@@ -408,5 +409,33 @@ twitter {
   }
   .hero-section-servicestwitter {
     min-height: fit-content !important;
+  }
+  .div-hero-bullet-instagram img {
+    margin-left: 25px;
+  }
+  .hero-section-services-instagram {
+    min-height: fit-content !important;
+  }
+  .div-hero-bullet-instagram {
+    display: block;
+  }
+  .div-hero-bullets-instagram {
+    width: 330px;
+    position: relative;
+    top: 40px;
+  }
+  .p-hero-bullet-instagram {
+  }
+  .div-hero-bullet-instagram img {
+    margin-left: 25px;
+  }
+  .hero-section-services-instagram {
+    min-height: fit-content !important;
+  }
+  .hero-section-servicestwitter {
+    min-height: fit-content !important;
+  }
+  .hero-pricing-containertwitter {
+    margin-top: -60px;
   }
 }
