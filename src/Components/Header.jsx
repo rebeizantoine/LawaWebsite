@@ -334,7 +334,7 @@ const Header = () => {
             <nav className=" header-nav-menu-wrapper">
               <ul className="header-nav-menu-list">
                 <img
-                  src={justlogo}
+                  src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
                   className="social-logo"
                   onClick={handleAllService}
                   alt="Socialplug Logo"

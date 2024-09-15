@@ -6,33 +6,44 @@ import "./adminlogin.css";
 const AdminLogin = () => {
   const [adminname, setAdminname] = useState("");
   const [adminpassword, setAdminpassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    // Basic validation
+    if (!adminname || !adminpassword) {
+      setErrorMessage("Please enter both username and password.");
+      return;
+    }
+
     try {
       const response = await axios.post(
         "https://lawawebsitebackend.onrender.com/adminlawa/adminlawa/login",
-        {
-          adminname,
-          adminpassword,
-        }
+        { adminname, adminpassword }
       );
+
       if (response.data.success) {
         localStorage.setItem("isAuthenticated", "true"); // Set authentication status
         navigate("/dashboard");
       } else {
-        alert(response.data.message);
+        setErrorMessage(
+          response.data.message || "Login failed. Please try again."
+        );
       }
     } catch (error) {
       console.error("There was an error logging in!", error);
-      alert("Unable to login");
+      setErrorMessage(
+        "Unable to login. Please check your credentials and try again."
+      );
     }
   };
 
   return (
     <form className="form321543" onSubmit={handleLogin}>
       <p id="heading321543">Login</p>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
       <div className="field321543">
         <svg
           className="input-icon321543"

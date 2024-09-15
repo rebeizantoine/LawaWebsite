@@ -305,6 +305,9 @@ twitter {
   margin-left: 45px;
 }
 @media only screen and (max-width: 600px) {
+  .button-pricing {
+    position: relative;
+  }
   body {
     padding: 10px;
     font-size: 14px; /* Adjust font size for smaller screens */
@@ -370,5 +373,40 @@ twitter {
   }
   .flex-containertwitter {
     margin-top: -60px;
+  }
+  .div-hero-bullettwitter {
+    display: block;
+  }
+  .div-hero-bulletstwitter {
+    width: 330px;
+    position: relative;
+    top: 40px;
+  }
+  .p-hero-bullettiktok {
+  }
+  .div-hero-bullettiktok img {
+    margin-left: 25px;
+  }
+  .hero-section-servicestiktok {
+    min-height: fit-content !important;
+  }
+  .div-hero-bullettiktok {
+    display: block;
+  }
+  .div-hero-bulletstiktok {
+    width: 330px;
+    position: relative;
+    top: 40px;
+  }
+  .p-hero-bullettiktok {
+  }
+  .div-hero-bullettiktok img {
+    margin-left: 25px;
+  }
+  .hero-section-servicestiktok {
+    min-height: fit-content !important;
+  }
+  .hero-section-servicestwitter {
+    min-height: fit-content !important;
   }
 }

@@ -258,8 +258,8 @@ function Ordersummary() {
                       24/7 Customer Support
                     </div>
                     <div class="whats-included-item-description-order123 text-order123">
-                      The fastest response time in the industry - just 5
-                      minutes. All from 100% real humans, no AI here.
+                      The fastest response- just 5 minutes. All from 100% real
+                      humans, no AI here.
                     </div>
                   </div>
                 </div>
@@ -282,8 +282,8 @@ function Ordersummary() {
                       100% Account Safety
                     </div>
                     <div class="whats-included-item-description-order123 text-order123">
-                      The fastest response time in the industry - just 5
-                      minutes. All from 100% real humans, no AI here.
+                      The fastest response- just 5 minutes. All from 100% real
+                      humans, no AI here.
                     </div>
                   </div>
                 </div>
