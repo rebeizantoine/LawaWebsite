@@ -220,7 +220,7 @@
   .dashboard {
     flex-direction: column;
     height: auto;
-    top: 60px;
+    top: 160px;
   }
 
   /* Sidebar adjustment */
@@ -251,5 +251,12 @@
   .table-container {
     width: 100%;
     overflow-x: auto;
+  }
+  .messages-btn {
+    position: relative;
+    left: -540px;
+  }
+  .app-icon {
+    display: none;
   }
 }

@@ -449,7 +449,9 @@
   .p-notification-bar {
     margin-left: -15px;
   }
-  .section-notification {
-    width: 350px !important;
+  .banner {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
   }
 }
