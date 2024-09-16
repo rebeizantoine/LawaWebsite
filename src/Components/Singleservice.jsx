@@ -52,14 +52,14 @@ const Singleservice = () => {
                 />
                 <p className="p-hero-bullet-instagram">Instant Delivery</p>
               </div>
-              <div className="div-hero-bullet-instagram">
-                <img
-                  src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/628fdb670c2e9e80264b9f41_Coinboosts-check-green.svg"
-                  loading="lazy"
-                  alt="Checkmark green icon"
-                />
-                <p className="p-hero-bullet-instagram">100% Growth Guarantee</p>
-              </div>
+                <div className="div-hero-bullet-instagram">
+                  <img
+                    src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/628fdb670c2e9e80264b9f41_Coinboosts-check-green.svg"
+                    loading="lazy"
+                    alt="Checkmark green icon"
+                  />
+                  <p className="p-hero-bullet-instagram">100% Growth Guarantee</p>
+                </div>
               <div className="div-hero-bullet-instagram">
                 <img
                   src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/628fdb670c2e9e80264b9f41_Coinboosts-check-green.svg"

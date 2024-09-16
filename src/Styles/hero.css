@@ -75,8 +75,7 @@
   text-decoration: none;
   color: #fff;
 }
-.button-hero:hover{
-  
+.button-hero:hover {
 }
 .button-hero-white {
   background-color: white;
@@ -118,7 +117,9 @@
 }
 @media screen and (max-width: 600px) {
   .bigger-hero {
-    padding: 150px 60px 40px;
+    padding: 170px 60px 40px;
+    position: relative;
+    left: 6px;
   }
 
   .hero-grid-banner {

@@ -145,6 +145,7 @@
     grid-column-gap: 0;
     grid-row-gap: 20px;
     margin: 40px auto 0;
+    margin-left: 5px;
   }
 
   .accordion-item {

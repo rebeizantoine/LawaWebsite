@@ -17,10 +17,10 @@ const allBoxes = [
   { id: 8, label: "10000", value: 10000 },
   { id: 9, label: "20000", value: 20000 },
   { id: 10, label: "40000", value: 40000 },
-  { id: 11, label: "50000", value: 50000 },
-  { id: 12, label: "100000", value: 100000 },
-  { id: 13, label: "200000", value: 200000 },
-  { id: 14, label: "400000", value: 400000 },
+  // { id: 11, label: "50000", value: 50000 },
+  // { id: 12, label: "100000", value: 100000 },
+  // { id: 13, label: "200000", value: 200000 },
+  // { id: 14, label: "400000", value: 400000 },
 ];
 
 const limitedBoxes = allBoxes.slice(0, 4);

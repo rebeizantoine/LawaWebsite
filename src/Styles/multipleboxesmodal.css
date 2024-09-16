@@ -351,6 +351,9 @@
   }
   .modal-close123456 {
     position: relative;
-    left: 320px;
+    left: 0px;
+  }
+  .modal-box123 {
+    max-width: 100% !important;
   }
 }
