@@ -110,11 +110,11 @@
     padding-left: 10px;
   }
   .h2-center {
-    margin-left: 90px;
+    margin-left: 0px;
   }
   .span-text-17 {
     position: relative;
-    left: -40px;
+    left: 0 px;
   }
 }
 
@@ -128,6 +128,7 @@
   display: block;
   max-width: 100%;
   transition: 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .grid-block:hover {

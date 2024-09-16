@@ -375,10 +375,13 @@
   }
   .div-hero-bullets-instagram .div-hero-bullet-instagram:nth-of-type(2) img {
     position: relative !important;
-    left: 30px !important;
+    left: 15px;
   }
   .div-hero-bullets-instagram .div-hero-bullet-instagram:nth-of-type(3) img {
     position: relative !important;
     left: 25px !important;
+  }
+  .button-pricing {
+    position: relative;
   }
 }

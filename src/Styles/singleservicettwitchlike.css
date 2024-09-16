@@ -368,4 +368,8 @@
   .hero-section-servicestwitch {
     min-height: fit-content !important;
   }
+  .div-hero-bulletstwitch {
+    width: 100%;
+    justify-content: center;
+  }
 }
