@@ -51,7 +51,7 @@ const Header = () => {
     setShowSidebar(!showSidebar);
   };
   const toggleImage = () => {
-    setIsImageOne(!isImageOne); // Toggle between the two images
+    // setIsImageOne(!isImageOne); // Toggle between the two images
     toggleSidebar();
   };
 
