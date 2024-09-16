@@ -437,4 +437,19 @@
     position: relative;
     left: -30px;
   }
+  .notification-bar {
+    display: flex;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .p-notification-bar {
+    margin-left: -15px;
+  }
+  .section-notification {
+    width: 350px !important;
+  }
 }
