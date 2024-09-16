@@ -109,6 +109,13 @@
     margin-right: 0px;
     margin-top: 40px;
   }
+  .h2-center {
+    margin-left: 90px;
+  }
+  .span-text-17 {
+    position: relative;
+    left: -40px;
+  }
 }
 
 .grid-block {
