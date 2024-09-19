@@ -76,6 +76,7 @@ function Ordersummary() {
         toast.success("Order submitted successfully!");
         setTimeout(() => {
           console.log("Clearing cart...");
+
           handleEmptyCart();
           // Optionally, navigate to a success page
           // navigate("/success");
@@ -90,7 +91,6 @@ function Ordersummary() {
   };
   return (
     <div className="order12-upvote-downvote-info">
-      <ToastContainer />
       <div className="lefto">
         <img
           src={justlogo}
@@ -442,6 +442,7 @@ function Ordersummary() {
             <button onClick={handleSubmit} className="submit-order-button">
               Submit Order
             </button>
+            <ToastContainer />
           </div>
         </div>
       </div>
