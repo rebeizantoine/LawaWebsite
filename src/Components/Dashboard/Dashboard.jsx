@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   const fetchOrders = () => {
     axios
-      .get("https://lawawebsitebackend.onrender.com/orderLawa/")
+      .get("https://allinone-14n7.onrender.com/orderLawa/")
       .then((response) => {
         setOrders(response.data);
         toast.success("Orders fetched successfully!");

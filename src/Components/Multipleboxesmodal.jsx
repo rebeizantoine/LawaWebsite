@@ -276,7 +276,7 @@ const MultipleBoxesModal = ({ onClose }) => {
                 </li>
                 <li>
                   <i className="fe fe-check text-icon" aria-hidden="true"></i>{" "}
-                  No Password Required
+                  No Password
                 </li>
               </ul>
             </div>
@@ -298,7 +298,7 @@ const MultipleBoxesModal = ({ onClose }) => {
                 </li>
                 <li>
                   <i className="fe fe-check text-icon" aria-hidden="true"></i>{" "}
-                  No Password Required
+                  No Password
                 </li>
               </ul>
             </div>

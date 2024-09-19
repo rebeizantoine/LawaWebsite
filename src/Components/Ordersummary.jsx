@@ -12,6 +12,7 @@ import bnb from "../Images/bnb-bnb-logo.png";
 import visa from "../Images/visa_PNG391.png";
 import paypal from "../Images/paypal-logo-2.png";
 import { useCart } from "./Cartcontext"; // Import the useCart hook
+import justlogo from "../Images/jansmmlogo.png";
 
 function Ordersummary() {
   const location = useLocation();
@@ -66,7 +67,7 @@ function Ordersummary() {
     try {
       console.log("Attempting to submit order...");
       const response = await axios.post(
-        "https://lawawebsitebackend.onrender.com/orderlawa/add",
+        "https://allinone-14n7.onrender.com/orderlawa/add",
         orderData
       );
       console.log("Response received:", response);
@@ -89,10 +90,11 @@ function Ordersummary() {
   };
   return (
     <div className="order12-upvote-downvote-info">
+      <ToastContainer />
       <div className="lefto">
-        <ToastContainer />
         <img
-          src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
+          src={justlogo}
+          // src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
           alt=""
           className="pictua"
         />

@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
     try {
       const response = await axios.post(
-        "https://lawawebsitebackend.onrender.com/adminlawa/adminlawa/login",
+        "https://allinone-14n7.onrender.com/adminlawa/adminlawa/login",
         { adminname, adminpassword }
       );
 
