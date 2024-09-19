@@ -439,10 +439,10 @@ function Ordersummary() {
                 )}
               </div>
             </div>
+            <ToastContainer />
             <button onClick={handleSubmit} className="submit-order-button">
               Submit Order
             </button>
-            <ToastContainer />
           </div>
         </div>
       </div>

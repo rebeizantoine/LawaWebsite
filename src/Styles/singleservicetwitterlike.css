@@ -29,7 +29,9 @@ twitter {
   overflow: hidden;
   margin-bottom: -60px;
 }
-
+.button-pricingtwitter:hover {
+  cursor: pointer;
+}
 .flex-containertwitter {
   text-align: center;
   flex-direction: column;
