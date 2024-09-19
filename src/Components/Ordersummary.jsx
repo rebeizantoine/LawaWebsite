@@ -79,7 +79,7 @@ function Ordersummary() {
 
           handleEmptyCart();
           // Optionally, navigate to a success page
-          // navigate("/success");
+          navigate("/thankyoupage");
         }, 1000); // Adjust the delay as needed
       } else {
         toast.error("Order submission failed.");

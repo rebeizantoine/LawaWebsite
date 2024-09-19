@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/thankyoupage.css"; // Ensure you import the CSS file
+import logosmm from "../Images/jansmmlogo.png";
 
 const Thankyoupage = () => {
   const navigate = useNavigate();
@@ -12,7 +13,8 @@ const Thankyoupage = () => {
     <div className="thank-you-container">
       <h1 className="thank-you-message">Thank You for Your Order!</h1>
       <img
-        src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
+        src={logosmm}
+        // src="https://cdn.prod.website-files.com/628d4467de238a5806753c9b/643f0d770b2aae1624f2453d_Socialplug-logo-black.svg"
         alt="Thank You"
         className="thank-you-image"
       />

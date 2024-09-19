@@ -65,6 +65,8 @@
 @media (max-width: 600px) {
   .thank-you-container {
     padding: 1rem;
+    position: relative;
+    top: 100px;
   }
 
   .thank-you-message {
