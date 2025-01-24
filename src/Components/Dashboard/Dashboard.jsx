@@ -124,7 +124,7 @@ const Dashboard = () => {
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a href="#">
+            <a href="/ordercalculator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -144,7 +144,7 @@ const Dashboard = () => {
             </a>
           </li>
           <li className="sidebar-list-item">
-            <a href="#">
+            <a href="/ordercalculator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -161,7 +161,7 @@ const Dashboard = () => {
                 <rect x="1" y="3" width="22" height="14"></rect>
                 <line x1="10" y1="9" x2="14" y2="9"></line>
               </svg>
-              <span>Inbox</span>
+              <span>Pricing</span>
             </a>
           </li>
           <li className="sidebar-list-item">

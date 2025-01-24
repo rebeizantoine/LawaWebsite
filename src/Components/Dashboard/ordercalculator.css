@@ -1,0 +1,154 @@
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculate-list {
+  list-style: none;
+  padding: 0;
+}
+
+.calculate-list li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.lokkoz {
+  font-size: 1.5rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid green;
+  background: #252525;
+  box-shadow: 3px 3px green;
+  cursor: pointer;
+  margin: 0px 0;
+  margin-left: 38%;
+}
+.lokkoz:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+.kokos {
+  display: flex;
+  flex-direction: column; /* Ensures the label and input stack vertically */
+  justify-content: center; /* Centers vertically within the parent */
+  align-items: center; /* Centers horizontally within the parent */
+  text-align: center;
+  width: 100%; /* Full width of the parent */
+  height: 100px; /* Full height of the viewport */
+}
+.input-containerOfTheYear {
+  display: flex;
+  background: white;
+  border-radius: 1rem;
+  background: linear-gradient(45deg, #c5c5c5 0%, #ffffff 100%);
+  box-shadow: 20px 20px 20px #d8d8d8, -10px -10px 20px #f8f8f8;
+  padding: 0.3rem;
+  gap: 0.3rem;
+  width: 300px;
+}
+
+.input-containerOfTheYear input {
+  border-radius: 0.8rem 0 0 0.8rem;
+  background: #e8e8e8;
+  box-shadow: inset 13px 13px 10px #dcdcdc, inset -13px -13px 10px #f4f4f4;
+  width: 100%;
+  flex-basis: 75%;
+  padding: 1rem;
+  border: none;
+  border-left: 2px solid #4998ff;
+  color: #5e5e5e;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-containerOfTheYear input:focus {
+  border-left: 2px solid #4998ff;
+  outline: none;
+  box-shadow: inset 13px 13px 10px #bff0fa, inset -13px -13px 10px #f4f4f4;
+}
+
+.input-containerOfTheYear button {
+  flex-basis: 25%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #bff0fa 0%, #4998ff 100%);
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-containerOfTheYear button:hover {
+  background: linear-gradient(135deg, #bff0fa 0%, #4998ffc4 100%);
+}
+
+@media (max-width: 500px) {
+  .input-containerOfTheYear {
+    flex-direction: column;
+  }
+
+  .input-containerOfTheYear input {
+    border-radius: 0.8rem;
+  }
+
+  .input-containerOfTheYear button {
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+}
+.lkoko {
+  position: absolute;
+  top: 25%;
+}
+.toggle-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}

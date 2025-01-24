@@ -308,7 +308,7 @@ function Ordersummary() {
                   </svg>
                   <div class="flex-order123 flex-column-order123">
                     <div class="whats-included-item-title-order123 text-title-order123">
-                      100% Money-Back Guarantee
+                      100% Money-Back
                     </div>
                     <div class="whats-included-item-description-order123 text-order123">
                       In case you’re not satisfied, we offer a 100% refund

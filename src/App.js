@@ -54,6 +54,8 @@ import OrderDash from "./Components/Dashboard/Orderdash";
 import Thankyoupage from "./Components/Thankyoupage";
 import AdminLogin from "./Components/Dashboard/Dashboardlogin";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import OrderCalculator from "./Components/Dashboard/OrderCalculator";
+import Sidebar from "./Components/Dashboard/Sidebar";
 
 function App() {
   return (
@@ -339,6 +341,26 @@ function App() {
                 <>
                   {/* <Header /> */}
                   <OrderDash />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/orderCalculator"
+              element={
+                <>
+                  <Header />
+                  <OrderCalculator />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/sidebar"
+              element={
+                <>
+                  <Header />
+                  <Sidebar />
                   <Footer />
                 </>
               }

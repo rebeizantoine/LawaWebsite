@@ -355,11 +355,11 @@ order12-form-control {
     width: 300px;
   }
 }
-@media screen and (min-width: 1450px) and (max-width: 1650px) {
+@media screen and (min-width: 1150px) and (max-width: 1650px) {
   .p-3 {
-    margin-left: 150px;
+    margin-left: 150px !important;
   }
   .whats-included-items-wrapper-order123 {
-    width: 790px;
+    width: 730px;
   }
 }
