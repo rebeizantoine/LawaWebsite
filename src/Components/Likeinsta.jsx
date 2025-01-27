@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Multipleboxesmodal from "../Components/Multipleboxesmodal"; // Adjust path as necessary
 import "../Styles/singleservice.css";
 
 const Likeinsta = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const handleModalOpen = () => {
+  const handleModalOpen = useCallback(() => {
     console.log("Opening Modal...");
     setModalOpen(true);
-  };
+  }, []);
 
-  const handleModalClose = () => {
+  const handleModalClose = useCallback(() => {
     console.log("Closing Modal...");
     setModalOpen(false);
-  };
+  }, []);
 
   return (
     <div className="hero-section-services-instagram">
