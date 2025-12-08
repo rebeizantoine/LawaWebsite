@@ -1,6 +1,32 @@
 .order12-upvote-downvote-info {
   display: flex;
-  margin-top: 0px;
+}
+.crypto-animation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Controls spacing between the coins */
+}
+.crypto-pay-button {
+  margin-top: 20px;
+  background-color: #16a34a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.crypto-pay-button:hover {
+  background-color: #15803d;
+}
+
+.coin-wrapper {
+  padding: 1rem; /* Add spacing around each coin */
+  height: 100px;
 }
 
 .lefto {
@@ -189,7 +215,7 @@ order12-form-control {
   border-radius: 4px;
 }
 .submit-order-button {
-  background-color: #00c573;
+  background-color: var(--colorG1);
   border-radius: 9px;
   margin-left: 24px;
   font-family: "Nunito Sans", sans-serif;

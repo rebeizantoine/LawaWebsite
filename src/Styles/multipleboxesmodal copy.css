@@ -211,7 +211,7 @@
 }
 .features .text-icon {
   margin-right: 8px;
-  color: #00c573;
+  color: var(--colorG1);
 }
 
 .features a {

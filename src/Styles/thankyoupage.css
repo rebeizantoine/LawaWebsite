@@ -17,7 +17,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
-  color: #00c573;
+  color: var(--colorG1);
 }
 
 .thank-you-details {
@@ -29,7 +29,7 @@
 
 /* Button Styles */
 .button123 {
-  background-color: #00c573;
+  background-color: var(--colorG1);
   border-radius: 0.25rem;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;

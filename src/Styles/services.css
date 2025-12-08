@@ -36,7 +36,7 @@
 }
 .feature-grid-block {
   border: 1px solid #e2e4e8;
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
   box-shadow: none;
   border-radius: 8px;
   padding: 24px;

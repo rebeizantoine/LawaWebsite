@@ -16,7 +16,7 @@
 }
 
 .h2-center {
-  color: #14114b;
+  color: var(--colorBlackBox);
   text-align: center;
   letter-spacing: 0;
   margin: 0 auto;
@@ -26,7 +26,7 @@
   font-size: 32px;
 }
 .span-text-17 {
-  color: #00c573;
+  color: var(--colorG1);
 }
 .service-grid {
   grid-column-gap: 30px;
@@ -44,7 +44,7 @@
 }
 .grid-block {
   background-color: #0000;
-  border: 1.4px solid #e2e2e2;
+  border: 1.4px solid var(--colorPreviousGrey);
   border-radius: 10px;
 
   /* width: 100%; */
@@ -56,7 +56,7 @@
   transition: 0.3s ease;
 }
 .grid-block:hover {
-  border-color: #00c573;
+  border-color: var(--colorG1);
   cursor: pointer;
 }
 .grid-icon {
@@ -74,7 +74,7 @@
   display: flex;
 }
 .faq-title {
-  color: #1b2d45;
+  color: var(--colorPreviousFaqTitle);
   text-align: left;
   margin-top: 0;
   margin-bottom: 8px;
@@ -120,7 +120,7 @@
 
 .grid-block {
   background-color: #0000;
-  border: 1.4px solid #e2e2e2;
+  border: 1.4px solid var(--colorPreviousGrey);
   border-radius: 10px;
   padding: 24px;
   text-decoration: none;
@@ -132,7 +132,7 @@
 }
 
 .grid-block:hover {
-  border-color: #00c573;
+  border-color: var(--colorG1);
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .faq-title {
-  color: #1b2d45;
+  color: var(--colorPreviousFaqTitle);
   text-align: left;
   margin-top: 0;
   margin-bottom: 8px;

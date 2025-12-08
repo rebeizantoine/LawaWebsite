@@ -1,6 +1,6 @@
 .bigger-hero {
   border-bottom: 1px solid #ede4e8;
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
   background-image: linear-gradient(#fffffff5, #fff),
     url("../Images/gridalignement.png"); /* Replace with full URL */
   background-position: 0 0, 50%; /* Ensure both backgrounds are positioned correctly */
@@ -48,7 +48,7 @@
   line-height: 64px;
 }
 .text-span {
-  color: #00c573;
+  color: var(--colorG1);
 }
 .hero-paragraph {
   color: #668889;
@@ -61,7 +61,7 @@
   line-height: 32px;
 }
 .button-hero {
-  background-color: #00c573;
+  background-color: var(--colorG1);
   text-align: center;
   border-radius: 10px;
   margin-top: 20px;
@@ -78,7 +78,7 @@
 .button-hero:hover {
 }
 .button-hero-white {
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
   color: #14114b;
   border: 1px solid #1208301a;
   border-radius: 10px;

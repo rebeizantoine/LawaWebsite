@@ -43,7 +43,7 @@
   position: absolute;
   width: 28px;
   height: 28px;
-  background: #00c573; /* Updated color for contrast */
+  background: var(--colorG1); /* Updated color for contrast */
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -90,7 +90,7 @@
   -webkit-background-clip: text;
   background: linear-gradient(
     95deg,
-    #00c573 15%,
+    var(--colorG1) 15%,
     #009e53 45%,
     #007a39 75%,
     #004d1a 100%
@@ -114,12 +114,12 @@
   left: 100px;
   width: 86%;
   height: 6px;
-  background: #00c573; /* Updated color for contrast */
+  background: var(--colorG1); /* Updated color for contrast */
   z-index: 0; /* Ensure line is below the dots */
   transform: translateY(-50%); /* Center progress line vertically */
   background-image: radial-gradient(
     circle farthest-corner at 0%,
-    #00c573 25%,
+    var(--colorG1) 25%,
     #009e53 45%,
     #007a39 65%,
     #004d1a 85%

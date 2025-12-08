@@ -1,5 +1,5 @@
 .content-section1 {
-  background-color: whitesmoke;
+  background-color: var(--colorwhitsmokOfOldGreen);
   border-bottom: 1px solid #e2e2e2;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -83,7 +83,7 @@
   :root {
     --root-color--tiktok: #14114b; /* Example color for primary TikTok elements */
     --root-color--secondary: #686889; /* Example secondary color */
-    --root-bg--section: whitesmoke;
+    --root-bg--section: var(--colorwhitsmokOfOldGreen););
     --root-border--section: #e2e2e2;
     --root-color--text: #fff;
     --root-color--outline: #333;

@@ -78,7 +78,7 @@
   margin-top: 0;
 }
 .a-standard {
-  color: #00c573;
+  color: var(--colorG1);
   text-decoration: underline;
   background-color: #0000;
 }

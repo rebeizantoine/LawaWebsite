@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 .footer-title {
-  color: white;
+  color: var(--colorWhitOfOldGreen);
   text-align: left;
   letter-spacing: 0.3px;
   margin-bottom: 16px;
@@ -149,7 +149,7 @@
   margin-right: auto;
 }
 .footer-section a:hover {
-  color: #00c573;
+  color: var(--colorG1);
 }
 @media (max-width: 600px) {
   .footer-grid {

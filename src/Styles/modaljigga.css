@@ -108,7 +108,7 @@
 }
 
 .accordion-item-jigga {
-  border: 1px solid #00c573;
+  border: 1px solid var(--colorG1);
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -132,7 +132,7 @@
 }
 
 .accordion-header-jigga:hover {
-  background-color: #00c573;
+  background-color: var(--colorG1);
 }
 
 .accordion-body-jigga {
@@ -140,7 +140,7 @@
   background: #1d1d22;
   border-radius: 0 0 10px 10px;
   color: #f6f0e6;
-  border-top: 1px solid #00c573;
+  border-top: 1px solid var(--colorG1);
 }
 
 .accordion-icon-jigga {
@@ -155,7 +155,7 @@
 .color-select-jigga {
   width: 100%;
   padding: 15px;
-  border: 1px solid #00c573;
+  border: 1px solid var(--colorG1);
   border-radius: 8px;
   background: #1d1d22;
   color: #f6f0e6;
@@ -165,5 +165,5 @@
 
 .color-select-jigga:hover {
   box-shadow: 0 5px 15px rgba(0, 197, 115, 0.3);
-  border-color: #00c573;
+  border-color: var(--colorG1);
 }

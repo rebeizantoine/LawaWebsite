@@ -1,5 +1,5 @@
 .content-section1 {
-  background-color: whitesmoke;
+  background-color: var(--colorWhitsmokOfOldGreen);
   border-bottom: 1px solid #e2e2e2;
   padding-top: 80px;
   padding-bottom: 80px;

@@ -1,10 +1,10 @@
 twitter {
-  --colortiktok-white: #ffffff;
+  --colortiktok-white: var(--colorWhitOfOldGreen);
   --colortiktok-black: #000000;
   --colortiktok-dark-gray: #14141b;
   --colortiktok-light-gray: #686889;
   --colortiktok-light-bg: #f6faff;
-  --colortiktok-green: #00c573;
+  --colortiktok-green: var(--colorG1);
   --colortiktok-green-dark: #01a55e;
   --colortiktok-cyan: #69c9d0;
   --colortiktok-magenta: #ee1d52;

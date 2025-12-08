@@ -56,6 +56,7 @@ import AdminLogin from "./Components/Dashboard/Dashboardlogin";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import OrderCalculator from "./Components/Dashboard/OrderCalculator";
 import Sidebar from "./Components/Dashboard/Sidebar";
+import StripeWrapper2 from "./Components/StripeWrapper2";
 
 function App() {
   return (
@@ -221,7 +222,9 @@ function App() {
               element={
                 <>
                   <Header />
-                  <OrderSummary />
+                  <StripeWrapper2>
+                    <OrderSummary />
+                  </StripeWrapper2>
                   <Footer />
                 </>
               }

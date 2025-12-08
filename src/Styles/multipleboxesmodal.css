@@ -219,7 +219,7 @@
 
 .features .text-icon {
   margin-right: 8px;
-  color: #00c573; /* Accent color */
+  color: var(--colorG1); /* Accent color */
 }
 
 .features a {

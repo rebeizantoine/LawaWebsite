@@ -10,6 +10,14 @@ body {
   background-color: #ffffff; /* or your preferred background color */
   line-height: 1.6; /* Ensure readability */
 }
+:root {
+  --colorG1: #00c573;
+  --colorWhitOfOldGreen: #ffffff;
+  --colorWhitsmokOfOldGreen: whitesmoke;
+  --colorBlackBox: #14114b;
+  --colorPreviousGrey: #e2e2e2;
+  --colorPreviousFaqTitle: #1b2d45;
+}
 
 .App-logo {
   height: 40vmin;

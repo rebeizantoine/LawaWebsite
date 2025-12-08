@@ -9,15 +9,23 @@ import tether from "../Images/tether-usdt-logo.png";
 import etherium from "../Images/ethereum-eth-logo.png";
 import solana from "../Images/solana-sol-logo.png";
 import bnb from "../Images/bnb-bnb-logo.png";
-import visa from "../Images/visa_PNG391.png";
+import visaaa from "../Images/visaa.png";
 import paypal from "../Images/paypal-logo-2.png";
 import { useCart } from "./Cartcontext"; // Import the useCart hook
 import justlogo from "../Images/jansmmlogo.png";
+import CheckoutForm from "./checkoutComForm";
+import CoinSpinning from "./coinSpinning";
+import EtheriumSpinning from "./ethSpinning";
+import TronSpinning from "./tronSpinning";
+import { svgvisa } from "../Images/visa-svgrepo-com.svg";
+import { visamastercard } from "../Images/mastercard-svgrepo-com.svg";
+import PopupModal from "./PopupModal"; // Adjust path if needed
 
 function Ordersummary() {
   const location = useLocation();
   const { cartItems = [], totalAmount = 0 } = location.state || {};
   const { clearCart } = useCart();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const [selectedMethod, setSelectedMethod] = useState("");
 
@@ -26,7 +34,8 @@ function Ordersummary() {
     orderla_lastname: "",
     orderla_email: "",
     orderla_paymentoption: "",
-    orderla_additionalcomment: "",
+    orderla_description: "",
+    orderla_amount: "",
   });
   const handleEmptyCart = () => {
     clearCart();
@@ -41,7 +50,7 @@ function Ordersummary() {
   };
 
   const handleMethodChange = (method) => {
-    setSelectedMethod(method);
+    setSelectedMethod((prev) => (prev === method ? "" : method));
   };
 
   const handleSubmit = async (e) => {
@@ -89,6 +98,66 @@ function Ordersummary() {
       toast.error("Error submitting order: " + error.message);
     }
   };
+  const handleCryptoPayment = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/payments/create",
+        {
+          amount: totalAmount.toFixed(2),
+          currency_from: "usd",
+          currency_to: "USDTTRC20", // or change to BTC, ETH, etc.
+        }
+      );
+
+      if (response.data?.payment_url) {
+        toast.success("Redirecting to crypto payment...");
+        window.location.href = response.data.payment_url;
+      } else {
+        toast.error("Failed to generate crypto payment link.");
+      }
+    } catch (error) {
+      console.error("Crypto payment error:", error);
+      toast.error("Error processing crypto payment.");
+    }
+  };
+  const openCryptoPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closeCryptoPopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const confirmCryptoPayment = async () => {
+    closeCryptoPopup();
+    await handleCryptoPayment(); // your existing logic
+  };
+  useEffect(() => {
+    if (cartItems && cartItems.length > 0) {
+      const description = cartItems
+        .map(
+          (item, index) =>
+            `Service ${index + 1}: ${item.service} (Quantity: ${item.quantity})`
+        )
+        .join("; ");
+
+      setFormData((prev) => ({
+        ...prev,
+        orderla_description: description,
+        orderla_amount: totalAmount.toFixed(2), // just take it directly from totalAmount
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        orderla_description: "",
+        orderla_amount: "",
+      }));
+    }
+  }, [cartItems, totalAmount]);
+  useEffect(() => {
+    console.log("Updated formData:", formData);
+  }, [formData]);
+
   return (
     <div className="order12-upvote-downvote-info">
       <div className="lefto">
@@ -346,98 +415,118 @@ function Ordersummary() {
                     }`}
                   ></div>
                 </div>
-                {selectedMethod === "crypto" && (
-                  <div className="payment-details-order123">
-                    <div className="payment-form-order123">
-                      <label>First Name</label>
-                      <input
-                        type="text"
-                        name="orderla_firstname" // Match with formData key
-                        value={formData.orderla_firstname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Last Name</label>
-                      <input
-                        type="text"
-                        name="orderla_lastname" // Match with formData key
-                        value={formData.orderla_lastname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="orderla_email" // Match with formData key
-                        value={formData.orderla_email} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-
-                      <label>Additional Comment/request</label>
-                      <textarea
-                        name="orderla_additionalcomment"
-                        className="addicom" // Match with formData key
-                        value={formData.orderla_additionalcomment} // Bind to the correct state
-                        onChange={handleInputChange} // Update formData when the textarea changes
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {selectedMethod === "creditVisa" && (
-                  <div className="payment-details-order123">
-                    <div className="payment-form-order123">
-                      <label>First Name</label>
-                      <input
-                        type="text"
-                        name="orderla_firstname" // Match with formData key
-                        value={formData.orderla_firstname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Last Name</label>
-                      <input
-                        type="text"
-                        name="orderla_lastname" // Match with formData key
-                        value={formData.orderla_lastname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="orderla_email" // Match with formData key
-                        value={formData.orderla_email} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {selectedMethod === "PayPal" && (
-                  <div className="payment-details-order123">
-                    <div className="payment-form-order123">
-                      <label>First Name</label>
-                      <input
-                        type="text"
-                        name="orderla_firstname" // Match with formData key
-                        value={formData.orderla_firstname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Last Name</label>
-                      <input
-                        type="text"
-                        name="orderla_lastname" // Match with formData key
-                        value={formData.orderla_lastname} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="orderla_email" // Match with formData key
-                        value={formData.orderla_email} // Bind to the correct state
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
+              <div
+                className={`payment-box-order123 ${
+                  selectedMethod === "credit-card" ? "selected-order123" : ""
+                }`}
+                onClick={() => handleMethodChange("credit-card")}
+              >
+                <div className="box-content-order123">
+                  <div className="box-title-order123">Credit Card</div>
+                  <div className="box-image-order123">
+                    <div className="crypto-logos">
+                      <nav>
+                        <img src={visaaa} alt="" style={{ width: "auto" }} />
+                      </nav>
+                    </div>
+                  </div>
+                  <div
+                    className={`circle-order123 ${
+                      selectedMethod === "credit-card"
+                        ? "selected-circle-order123"
+                        : ""
+                    }`}
+                  ></div>
+                </div>
+              </div>
+              {selectedMethod === "crypto" && (
+                <div className="payment-details-order123">
+                  <div className="payment-form-order123">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      name="orderla_firstname"
+                      value={formData.orderla_firstname}
+                      onChange={handleInputChange}
+                    />
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      name="orderla_lastname"
+                      value={formData.orderla_lastname}
+                      onChange={handleInputChange}
+                    />
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      name="orderla_email"
+                      value={formData.orderla_email}
+                      onChange={handleInputChange}
+                    />
+
+                    {/* 👇 Insert spinning coin here */}
+                    <div className="crypto-animation">
+                      <div className="coin-wrapper">
+                        <CoinSpinning fontSize="50px" />
+                      </div>
+                      <div className="coin-wrapper">
+                        <EtheriumSpinning fontSize="50px" />
+                      </div>
+                      <div className="coin-wrapper">
+                        <TronSpinning fontSize="50px" />
+                      </div>
+                    </div>
+                    <button
+                      onClick={handleCryptoPayment}
+                      className="crypto-pay-button"
+                    >
+                      Pay with Crypto (USDT TRC20)
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {selectedMethod === "credit-card" && (
+                <div
+                  className="payment-details-order123"
+                  style={{
+                    border: "1px solid #ccc",
+                    padding: "20px",
+                    borderRadius: "8px",
+                  }}
+                >
+                  <CheckoutForm />
+                </div>
+              )}
+
+              {selectedMethod === "PayPal" && (
+                <div className="payment-details-order123">
+                  <div className="payment-form-order123">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      name="orderla_firstname" // Match with formData key
+                      value={formData.orderla_firstname} // Bind to the correct state
+                      onChange={handleInputChange}
+                    />
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      name="orderla_lastname" // Match with formData key
+                      value={formData.orderla_lastname} // Bind to the correct state
+                      onChange={handleInputChange}
+                    />
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      name="orderla_email" // Match with formData key
+                      value={formData.orderla_email} // Bind to the correct state
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
             <ToastContainer />
             <button onClick={handleSubmit} className="submit-order-button">
@@ -445,6 +534,17 @@ function Ordersummary() {
             </button>
           </div>
         </div>
+        <PopupModal
+          isOpen={isPopupOpen}
+          onClose={closeCryptoPopup}
+          onConfirm={confirmCryptoPayment}
+          title="Confirm Crypto Payment"
+        >
+          <p>
+            Do you want to proceed with USDT payment of $
+            {totalAmount.toFixed(2)}?
+          </p>
+        </PopupModal>
       </div>
     </div>
   );

@@ -10,12 +10,12 @@
   justify-content: center;
   align-items: center;
   font-family: "Nunito Sans", sans-serif;
-  color: #14141b;
+  color: var(--colorBlackBox);
   z-index: 1000; /* Ensure the popup is on top */
 }
 
 .cart-popup {
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 400px; /* Adjust width as needed */
@@ -36,13 +36,13 @@
 }
 
 .cart-popup-close:hover {
-  color: #00c573;
+  color: var(--colorG1);
 }
 
 .cart-popup h3 {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #00c573;
+  color: var(--colorG1);
 }
 
 .cart-item {
@@ -50,7 +50,7 @@
   padding: 10px 0;
   margin-bottom: 10px;
   border: 1px solid #10cf7f;
-  color: #14141b;
+  color: var(--colorBlackBox);
   font-family: "Nunito Sans", sans-serif;
   border-radius: 7px;
   width: 300px;
@@ -67,10 +67,10 @@
 }
 
 .proceed-to-payment {
-  background-color: #00c573;
+  background-color: var(--colorG1);
   border: none;
   border-radius: 4px;
-  color: white;
+  color: var(--colorWhitOfOldGreen);
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -83,7 +83,7 @@
 }
 .empty-cart-button {
   background-color: red; /* or any color you prefer */
-  color: white;
+  color: var(--colorWhitOfOldGreen);
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -170,7 +170,7 @@
   width: 130px;
   height: 35px;
   border-radius: 30px;
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
   border: 1px #000000 solid;
   overflow: hidden;
 }
@@ -187,7 +187,7 @@
   left: -50px;
   font-weight: 700;
   font-size: 14px;
-  color: white;
+  color: var(--colorWhitOfOldGreen);
 }
 
 .icon {
@@ -206,7 +206,7 @@
   width: 130px;
   height: 33px;
   border-radius: 30px;
-  background-color: #00c573;
+  background-color: var(--colorG1);
 }
 
 .icon::after {
@@ -218,7 +218,7 @@
   width: 32px;
   height: 32px;
   border-radius: 100%;
-  background-color: white;
+  background-color: var(--colorWhitOfOldGreen);
 }
 .custom-button:hover {
   cursor: pointer;

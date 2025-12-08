@@ -89,17 +89,35 @@ const Header = () => {
             {showSidebar && (
               <nav className="bigger-1">
                 <ul className="sidebar123">
-                  <li onClick={() => setShowSidebar(false)}>
-                    <a href="#">
+                  <li className="xbutton" onClick={() => setShowSidebar(false)}>
+                    <button
+                      style={{
+                        backgroundColor: "#0d884f",
+                        border: "none",
+                        padding: "10px",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%", // makes it a circle
+                      }}
+                    >
                       <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
-                        height="30"
-                        viewBox="0 96 960 960"
-                        width="30"
                       >
-                        <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231-231 231Z" />
+                        <path
+                          d="M18 6L6 18M6 6l12 12"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                        />
                       </svg>
-                    </a>
+                    </button>
                   </li>
 
                   {/* Instagram Dropdown */}
@@ -109,8 +127,6 @@ const Header = () => {
                     <div className="dropdown-menu2">
                       <div className="dropdown-grid2">
                         <div className="grid-section2">
-                          <h3>Instagram1</h3>
-
                           <a
                             href="/followerinstagram"
                             className="dropdown-item2"
@@ -138,8 +154,6 @@ const Header = () => {
                           </a>
                         </div>
                         <div className="grid-section2">
-                          <h3>Instagram2</h3>
-
                           <a href="/commentsinsta" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -171,8 +185,6 @@ const Header = () => {
                     <div className="dropdown-menu2">
                       <div className="dropdown-grid2">
                         <div className="grid-section2">
-                          <h3>Twitter1</h3>
-
                           <a href="/followertwitter" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -195,8 +207,6 @@ const Header = () => {
                           </a>
                         </div>
                         <div className="grid-section2">
-                          <h3>Twitter2</h3>
-
                           <a href="/Commentstwitter" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -228,8 +238,6 @@ const Header = () => {
                     <div className="dropdown-menu2">
                       <div className="dropdown-grid2">
                         <div className="grid-section2">
-                          <h3>Tiktok1</h3>
-
                           <a href="/followertiktok" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -252,8 +260,6 @@ const Header = () => {
                           </a>
                         </div>
                         <div className="grid-section2">
-                          <h3>Tiktok2</h3>
-
                           <a href="/commentstiktok" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -284,8 +290,6 @@ const Header = () => {
                     <div className="dropdown-menu2">
                       <div className="dropdown-grid2">
                         <div className="grid-section2">
-                          <h3>Twitch1</h3>
-
                           <a href="/followertwitch" className="dropdown-item2">
                             <span className="spanokok">
                               <img
@@ -311,7 +315,7 @@ const Header = () => {
                     </div>
                   </li>
 
-                  <li className="header-nav-list-item2">
+                  <li className="header-nav-list-item2 zab-2">
                     <a
                       href="/abouttrial"
                       onClick={() => handleNavigation("/abouttrial")}
@@ -319,7 +323,7 @@ const Header = () => {
                       About Us
                     </a>
                   </li>
-                  <li className="header-nav-list-item2">
+                  <li className="header-nav-list-item2 zab-2">
                     <a
                       href="/contactus"
                       onClick={() => handleNavigation("/contactus")}
